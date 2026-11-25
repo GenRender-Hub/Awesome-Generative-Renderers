@@ -389,13 +389,68 @@
   }
 
   async function init() {
-    // Studio pause/play toggle
-    const studio = document.getElementById("render-studio");
-    document.getElementById("studio-toggle").addEventListener("click", (e) => {
-      const paused = studio.getAttribute("data-paused") === "true";
-      studio.setAttribute("data-paused", String(!paused));
-      e.currentTarget.textContent = paused ? "⏸ Pause" : "▶ Play";
-      e.currentTarget.setAttribute("aria-pressed", String(!paused));
+    // Interactive Classical Courtyard Clay <-> Cinema Wipe Controller
+    const vp = document.getElementById("stage-viewport");
+    const range = document.getElementById("stage-range");
+    const sweepBtn = document.getElementById("stage-sweep-btn");
+    let splitVal = 48;
+    let sweepDir = 1;
+    let autoSweep = true;
+    let dragging = false;
+
+    const setSplit = (pct) => {
+      splitVal = Math.max(6, Math.min(94, pct));
+      vp.style.setProperty("--split", `${splitVal.toFixed(1)}%`);
+      range.value = Math.round(splitVal);
+    };
+
+    const tickSweep = () => {
+      if (autoSweep && !dragging) {
+        splitVal += sweepDir * 0.22;
+        if (splitVal >= 82) sweepDir = -1;
+        if (splitVal <= 18) sweepDir = 1;
+        setSplit(splitVal);
+      }
+      requestAnimationFrame(tickSweep);
+    };
+    requestAnimationFrame(tickSweep);
+
+    const stopAuto = () => {
+      autoSweep = false;
+      sweepBtn.textContent = "▶ Auto-Wipe";
+    };
+
+    range.addEventListener("input", (e) => {
+      stopAuto();
+      setSplit(Number(e.target.value));
+    });
+
+    const updatePointer = (clientX) => {
+      const rect = vp.getBoundingClientRect();
+      setSplit(((clientX - rect.left) / rect.width) * 100);
+    };
+    vp.addEventListener("pointerdown", (e) => {
+      dragging = true;
+      stopAuto();
+      vp.setPointerCapture(e.pointerId);
+      updatePointer(e.clientX);
+    });
+    vp.addEventListener("pointermove", (e) => {
+      if (dragging) updatePointer(e.clientX);
+    });
+    vp.addEventListener("pointerup", () => (dragging = false));
+
+    sweepBtn.addEventListener("click", () => {
+      autoSweep = !autoSweep;
+      sweepBtn.textContent = autoSweep ? "⏸ Auto-Wipe" : "▶ Auto-Wipe";
+    });
+
+    document.querySelectorAll(".stage-btn[data-moment]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".stage-btn[data-moment]").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        vp.dataset.moment = btn.dataset.moment;
+      });
     });
 
     setActiveTier("T3a");

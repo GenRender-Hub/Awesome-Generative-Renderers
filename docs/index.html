@@ -32,17 +32,18 @@
   </header>
 
   <main id="top">
-    <!-- SPLIT HERO WITH ANIMATED RENDER-BOT STUDIO -->
+    <!-- ORIGINAL CLASSICAL ATELIER SPLIT HERO WITH INTERACTIVE CLAY <-> CINEMA COURTYARD STAGE -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-shell">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="status-dot"></span> Preprint · November 2026</div>
-          <h1 id="hero-title">
-            <span class="title-line">Video Models</span>
-            <span class="title-line title-as">as</span>
-            <span class="title-line title-accent">Generative Renderers<span class="title-dot">.</span></span>
-          </h1>
+          <div class="eyebrow"><span class="status-dot"></span> Survey &amp; Living Hub · November 2026</div>
+          <h1 id="hero-title">Video Models as Generative Renderers</h1>
           <p class="hero-sub">Foundations, Interfaces, Systems, and Beyond</p>
+          <div class="hero-rule" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+          <p class="hero-thesis">
+            Just as classical graphics separates <b>scene construction</b> from <b>rendering</b>, modern video models are shifting from open-ended content invention toward <b>faithful conditional rendering</b>—preserving externally constructed geometry, rules, and cast identity while synthesizing sunlit surfaces, cloth, and secondary motion.
+          </p>
 
           <ul class="hero-keywords" aria-label="Survey keywords">
             <li>Generative Rendering</li>
@@ -80,188 +81,221 @@
           </nav>
         </div>
 
-        <!-- BESPOKE ANIMATED RENDER-BOT STUDIO ILLUSTRATION -->
-        <figure class="render-studio" id="render-studio" data-paused="false">
-          <div class="studio-bar">
-            <span class="studio-bar-left"><i aria-hidden="true"></i> INSIDE THE RENDERER STUDIO</span>
-            <button type="button" class="studio-toggle" id="studio-toggle" aria-pressed="false">⏸ Pause</button>
+        <!-- 100% ORIGINAL INTERACTIVE CLASSICAL COURTYARD: DRAG CLAY WIREFRAME <-> SUNLIT GENERATIVE RENDER! -->
+        <figure class="atelier-stage" id="atelier-stage">
+          <div class="stage-bar">
+            <span class="stage-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-8h6v8"/></svg>
+              Classical Courtyard · Interactive Renderer Wipe
+            </span>
+            <div class="stage-controls">
+              <button type="button" class="stage-btn active" data-moment="duel">0:02 Clash</button>
+              <button type="button" class="stage-btn" data-moment="knockdown">0:04 Red Falls</button>
+              <button type="button" class="stage-btn" id="stage-sweep-btn">⏸ Auto-Wipe</button>
+            </div>
           </div>
 
-          <svg class="studio-svg" viewBox="0 0 640 415" fill="none" role="img" aria-label="An animated generative renderer robot at its dual-screen studio turning a 3D wireframe proxy into sunlit photoreal video">
-            <defs>
-              <linearGradient id="st-room" x1="60" y1="20" x2="580" y2="360" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#20332e"/><stop offset="1" stop-color="#14232c"/>
-              </linearGradient>
-              <linearGradient id="st-shell" x1="175" y1="145" x2="255" y2="235" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#ffffff"/><stop offset=".55" stop-color="#ebf2ef"/><stop offset="1" stop-color="#b8cec7"/>
-              </linearGradient>
-              <linearGradient id="st-visor" x1="185" y1="168" x2="245" y2="218" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#143230"/><stop offset="1" stop-color="#09161a"/>
-              </linearGradient>
-              <linearGradient id="st-teal" x1="0" y1="0" x2="1" y2="1">
-                <stop stop-color="#7ef0cf"/><stop offset=".45" stop-color="#2ca184"/><stop offset="1" stop-color="#185a4a"/>
-              </linearGradient>
-              <linearGradient id="st-sky" x1="352" y1="118" x2="546" y2="226" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2c4d66"/><stop offset=".55" stop-color="#4d7a7d"/><stop offset="1" stop-color="#c99b6a"/>
-              </linearGradient>
-              <linearGradient id="st-beam" x1="0" y1="0" x2="1" y2="0">
-                <stop stop-color="#7ef0cf" stop-opacity="0"/><stop offset="1" stop-color="#7ef0cf" stop-opacity=".42"/>
-              </linearGradient>
-              <radialGradient id="st-lamp-glow"><stop stop-color="#f3c57c" stop-opacity=".22"/><stop offset="1" stop-color="#f3c57c" stop-opacity="0"/></radialGradient>
-              <radialGradient id="st-screen-glow"><stop stop-color="#58dfb8" stop-opacity=".14"/><stop offset="1" stop-color="#58dfb8" stop-opacity="0"/></radialGradient>
-              <clipPath id="st-main-clip"><rect x="352" y="118" width="194" height="106" rx="6"/></clipPath>
-              <clipPath id="st-tl-clip"><rect x="344" y="236" width="208" height="44" rx="5"/></clipPath>
-            </defs>
+          <div class="stage-viewport" id="stage-viewport" data-moment="duel" style="--split:48%;">
+            <span class="stage-pill left">Upstream 3D Clay Proxy · s(t)</span>
+            <span class="stage-pill right">Generative Video Render · Y(t)</span>
 
-            <!-- Warm studio backdrop -->
-            <path d="M36 324V132C36 66 94 26 176 26H468C554 26 604 74 604 142V324Z" fill="url(#st-room)"/>
-            <ellipse cx="320" cy="390" rx="260" ry="15" fill="#0c1514" fill-opacity=".65"/>
-            <ellipse cx="445" cy="200" rx="185" ry="135" fill="url(#st-screen-glow)"/>
-            <ellipse cx="148" cy="296" rx="115" ry="48" fill="url(#st-lamp-glow)"/>
+            <!-- LAYER 1 (LEFT / UNDERNEATH): ARCHITECTURAL CLAY & WIREFRAME SPECIFICATION -->
+            <svg class="stage-layer" viewBox="0 0 640 390" fill="none" role="img" aria-label="Upstream 3D clay proxy of a classical courtyard with two wireframe fighters and camera frustum">
+              <defs>
+                <pattern id="bp-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#cfd5de" stroke-width="0.7"/>
+                </pattern>
+              </defs>
+              <rect width="640" height="390" fill="#f3f2f6"/>
+              <rect width="640" height="390" fill="url(#bp-grid)" opacity="0.75"/>
 
-            <!-- Wall shelf with books & studio plant -->
-            <g stroke="#6c877f" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M74 86H202M86 87v7M190 87v7" stroke-width="2"/>
-              <rect x="86" y="59" width="10" height="25" rx="2" fill="#8f729f" stroke="#b69bc4"/>
-              <rect x="100" y="52" width="13" height="32" rx="2" fill="#c29557" stroke="#e2b980"/>
-              <rect x="117" y="61" width="10" height="23" rx="2" fill="#528275" stroke="#85b5a7"/>
-              <!-- Potted plant -->
-              <path d="M156 67h24l-4 17h-16Z" fill="#a86353" stroke="#cf8b7b"/>
-              <path d="M168 67V48M168 60c-13-1-18-10-16-14 9-2 17 5 16 14Zm0-6c11 0 19-8 18-13-12-2-20 4-18 13Z" fill="#5fb497" stroke="#96dfc5" stroke-width="1.4"/>
-            </g>
-
-            <!-- Hanging Spec Ladder Mini-Storyboard (T0 -> T3) -->
-            <g>
-              <rect x="480" y="42" width="96" height="44" rx="7" fill="#1e2f2c" stroke="#4f6d65"/>
-              <rect x="488" y="52" width="16" height="22" rx="3" fill="#2c6356"/>
-              <rect x="508" y="52" width="16" height="22" rx="3" fill="#ad803b"/>
-              <rect x="528" y="52" width="16" height="22" rx="3" fill="#a75246"/>
-              <rect x="548" y="52" width="16" height="22" rx="3" fill="#785c84"/>
-              <text x="496" y="66" text-anchor="middle" fill="#e9f7f2" font-size="7" font-weight="700">T0</text>
-              <text x="516" y="66" text-anchor="middle" fill="#fff7e6" font-size="7" font-weight="700">T1</text>
-              <text x="536" y="66" text-anchor="middle" fill="#ffece8" font-size="7" font-weight="700">T2</text>
-              <text x="556" y="66" text-anchor="middle" fill="#f5ecf9" font-size="7" font-weight="700">T3</text>
-            </g>
-
-            <!-- LEFT MINI-MONITOR: UPSTREAM 3D WIREFRAME / CLAY PROXY -->
-            <rect x="58" y="138" width="108" height="114" rx="10" fill="#273a36" stroke="#65887e" stroke-width="1.8"/>
-            <rect x="65" y="146" width="94" height="96" rx="6" fill="#101c1d"/>
-            <text x="112" y="158" text-anchor="middle" fill="#89c9b8" font-size="6.4" font-weight="700" letter-spacing="1.1">UPSTREAM 3D PROXY</text>
-            <!-- Wireframe floor grid + 3D cube + camera frustum -->
-            <g class="wire-spin">
-              <path d="M74 222L92 204H132L150 222Z" stroke="#4b7b70" stroke-width="1" fill="#1b3532" fill-opacity=".45"/>
-              <path d="M84 213H140M112 204V222" stroke="#4b7b70" stroke-width=".7"/>
-              <!-- Wireframe cube (proxy character/scene) -->
-              <polygon points="112,174 128,183 128,203 112,212 96,203 96,183" fill="#785c84" fill-opacity=".35" stroke="#c7a5dc" stroke-width="1.3"/>
-              <path d="M112 174v38M96 183l16 9 16-9" stroke="#e4ccf2" stroke-width="1"/>
-              <!-- Camera frustum cone -->
-              <path d="M76 184l14-7v18l-14-7Z" fill="#e6b76c" fill-opacity=".4" stroke="#f2ca85" stroke-width="1.1"/>
-            </g>
-            <text x="112" y="236" text-anchor="middle" fill="#8ea8a1" font-size="6.5" font-family="monospace">s(t) → P(t)</text>
-            <!-- Monitor stand -->
-            <path d="M112 252v68M94 320h36" stroke="#6d8780" stroke-width="5" stroke-linecap="round"/>
-
-            <!-- Glowing condition wire flowing from Upstream Proxy -> Render-Bot -> Main Renderer Screen -->
-            <path d="M166 196 C 185 196, 185 268, 215 268 C 258 268, 286 196, 330 196" stroke="#58dfb8" stroke-width="2" class="flow-wire" opacity=".8"/>
-
-            <!-- MAIN RIGHT STUDIO MONITOR: GENERATIVE VIDEO RENDERER -->
-            <path d="M448 292v28M414 322h68" stroke="#7c968f" stroke-width="7" stroke-linecap="round"/>
-            <rect x="332" y="96" width="232" height="196" rx="13" fill="#293b37" stroke="#799c92" stroke-width="2"/>
-            <rect x="340" y="104" width="216" height="180" rx="8" fill="#0f1b1d"/>
-            <circle cx="352" cy="112" r="2.2" fill="#e07c6e"/><circle cx="360" cy="112" r="2.2" fill="#e8bf74"/><circle cx="368" cy="112" r="2.2" fill="#68d6b2"/>
-            <text x="454" y="114.5" text-anchor="middle" fill="#9bc2b7" font-size="6.8" font-weight="700" letter-spacing="1.4">GENERATIVE RENDERER · 60 FPS</text>
-
-            <!-- Rendered Video Canvas (Wireframe -> Sunlit Photoreal Sweep!) -->
-            <g clip-path="url(#st-main-clip)">
-              <rect x="352" y="118" width="194" height="106" fill="url(#st-sky)"/>
-              <!-- Warm sun + sunlit hills + courtyard arch -->
-              <circle cx="512" cy="144" r="14" fill="#f7cb8b"/>
-              <circle cx="512" cy="144" r="22" fill="#f7cb8b" fill-opacity=".14"/>
-              <path d="M350 224 L402 158 L442 192 L486 154 L548 224 Z" fill="#4f7c73"/>
-              <path d="M350 224 L414 186 L466 206 L516 178 L548 224 Z" fill="#29524a"/>
-              <!-- Courtyard pillars & red/blue fighter silhouettes -->
-              <rect x="366" y="176" width="8" height="46" fill="#d9c6a3"/>
-              <rect x="384" y="176" width="8" height="46" fill="#d9c6a3"/>
-              <path d="M362 176h34l-4-8h-26Z" fill="#e8d9bc"/>
-              <circle cx="446" cy="198" r="4" fill="#e06756"/><path d="M446 202v12m0-8-6 4m6-4 7 3" stroke="#e06756" stroke-width="2.4" stroke-linecap="round"/>
-              <circle cx="472" cy="195" r="4" fill="#63b5e8"/><path d="M472 199v14m0-9-6 3m6-3 6 4" stroke="#63b5e8" stroke-width="2.4" stroke-linecap="round"/>
-              <!-- Subtle wireframe mesh overlay -->
-              <path d="M352 172h194M416 118v106M482 118v106" stroke="#a6f2db" stroke-opacity=".16" stroke-dasharray="3 4"/>
-              <!-- Animated Emerald Render Sweep Beam -->
-              <g class="scan-beam">
-                <rect x="330" y="118" width="44" height="106" fill="url(#st-beam)"/>
-                <line x1="374" y1="118" x2="374" y2="224" stroke="#8ff5d6" stroke-width="1.8"/>
+              <!-- Clay horizon & perspective courtyard tiles -->
+              <path d="M0 264H640V390H0Z" fill="#e5e3eb"/>
+              <g stroke="#b8b2c7" stroke-width="0.9">
+                <line x1="0" y1="264" x2="640" y2="264"/>
+                <line x1="0" y1="292" x2="640" y2="292"/>
+                <line x1="0" y1="330" x2="640" y2="330"/>
+                <line x1="320" y1="264" x2="320" y2="390"/>
+                <line x1="250" y1="264" x2="170" y2="390"/>
+                <line x1="180" y1="264" x2="35" y2="390"/>
+                <line x1="390" y1="264" x2="470" y2="390"/>
+                <line x1="460" y1="264" x2="605" y2="390"/>
               </g>
-            </g>
-            <rect x="352" y="118" width="194" height="106" rx="6" stroke="#6f948a" stroke-opacity=".4"/>
 
-            <!-- Live Multi-Track Conditioning Timeline -->
-            <rect x="344" y="236" width="208" height="44" rx="5" fill="#0a1315"/>
-            <g clip-path="url(#st-tl-clip)">
-              <rect x="348" y="241" width="66" height="8" rx="2" fill="#785c84"/>
-              <rect x="418" y="241" width="128" height="8" rx="2" fill="#9979a8"/>
-              <rect x="348" y="253" width="96" height="8" rx="2" fill="#2b846f"/>
-              <rect x="448" y="253" width="98" height="8" rx="2" fill="#46a38d"/>
-              <rect x="348" y="265" width="198" height="7" rx="2" fill="#ad803b"/>
-              <g class="playhead">
-                <line x1="350" y1="236" x2="350" y2="280" stroke="#9cf7dc" stroke-width="1.3"/>
-                <polygon points="346,236 354,236 350,242" fill="#9cf7dc"/>
+              <!-- Classical colonnade & temple pediment in monochrome clay wireframe -->
+              <g stroke="#7c6d8c" stroke-width="1.3" fill="#e9e6ef">
+                <!-- Pediment -->
+                <polygon points="74,106 320,44 566,106" fill="#ece9f2"/>
+                <polygon points="108,100 320,54 532,100" fill="none" stroke="#9b8ea9" stroke-dasharray="4 3"/>
+                <rect x="78" y="106" width="484" height="16" fill="#e0dce8"/>
+                <!-- 6 Clay fluted columns -->
+                <rect x="96" y="122" width="24" height="142"/><line x1="104" y1="122" x2="104" y2="264" stroke="#b0a5bd"/><line x1="112" y1="122" x2="112" y2="264" stroke="#b0a5bd"/>
+                <rect x="174" y="122" width="24" height="142"/><line x1="182" y1="122" x2="182" y2="264" stroke="#b0a5bd"/><line x1="190" y1="122" x2="190" y2="264" stroke="#b0a5bd"/>
+                <rect x="252" y="122" width="24" height="142"/><line x1="260" y1="122" x2="260" y2="264" stroke="#b0a5bd"/>
+                <rect x="364" y="122" width="24" height="142"/><line x1="372" y1="122" x2="372" y2="264" stroke="#b0a5bd"/>
+                <rect x="442" y="122" width="24" height="142"/><line x1="450" y1="122" x2="450" y2="264" stroke="#b0a5bd"/>
+                <rect x="520" y="122" width="24" height="142"/><line x1="528" y1="122" x2="528" y2="264" stroke="#b0a5bd"/>
+                <!-- Central arch wireframe -->
+                <path d="M276 264V186A44 44 0 0 1 364 186V264" fill="none" stroke="#785c84" stroke-dasharray="5 3" stroke-width="1.5"/>
               </g>
-            </g>
 
-            <!-- STUDIO DESK -->
-            <rect x="46" y="320" width="548" height="14" rx="5" fill="#324742" stroke="#5c7b73" stroke-width="1.5"/>
-            <path d="M84 334v52M556 334v52" stroke="#293b37" stroke-width="10" stroke-linecap="round"/>
+              <!-- Orbiting Camera Trajectory Frustum C(t) -->
+              <path d="M74 334 C 190 368, 450 368, 566 334" stroke="#785c84" stroke-width="1.5" stroke-dasharray="6 4" fill="none"/>
+              <g class="cam-orbit">
+                <polygon points="86,318 110,308 110,334 86,324" fill="#785c84" fill-opacity="0.22" stroke="#785c84" stroke-width="1.4"/>
+                <rect x="66" y="313" width="20" height="15" rx="3" fill="#785c84"/>
+                <text x="116" y="325" font-size="9.5" font-weight="700" font-family="monospace" fill="#785c84">CAM C(t)</text>
+              </g>
 
-            <!-- FRIENDLY ANIMATED RENDER-BOT MASCOT AT THE DESK -->
-            <g>
-              <!-- Chair back -->
-              <rect x="172" y="254" width="18" height="62" rx="7" fill="#3d524c" stroke="#5b776f"/>
-              <!-- Robot torso -->
-              <path d="M188 260q0-20 22-21h14q22 1 24 22l2 44q-30 14-64 2Z" fill="url(#st-shell)" stroke="#1e4038" stroke-width="2"/>
-              <!-- Glowing Mint Prism Core on chest -->
-              <polygon points="219,256 231,269 219,282 207,269" fill="url(#st-teal)" stroke="#164036" stroke-width="1.6"/>
-              <polygon points="219,261 225,269 219,277 213,269" fill="#d9fff3" opacity=".8"/>
-              <!-- Tool belt (4 tier colored modules: T0 teal, T1 gold, T2 coral, T3 plum!) -->
-              <path d="M186 294q32 8 66 0v18q-34 8-66-1Z" fill="#2c4a43" stroke="#16332c" stroke-width="1.6"/>
-              <rect x="192" y="298" width="11" height="11" rx="2.5" fill="#46a38d"/>
-              <rect x="207" y="299" width="11" height="11" rx="2.5" fill="#d9a552"/>
-              <rect x="222" y="299" width="11" height="11" rx="2.5" fill="#cc6b5c"/>
-              <rect x="237" y="298" width="11" height="11" rx="2.5" fill="#9a7aa8"/>
-              <!-- Animated arms typing on control console -->
-              <path class="bot-arm-l" d="M190 258 C 174 282, 186 306, 212 312" stroke="#dce9e4" stroke-width="13" stroke-linecap="round"/>
-              <path class="bot-arm-r" d="M245 258 C 266 280, 272 302, 294 312" stroke="#dce9e4" stroke-width="13" stroke-linecap="round"/>
-              <!-- Control keyboard on desk -->
-              <path d="M226 312h78l6 8h-90Z" fill="#20312e" stroke="#6f948a" stroke-width="1.2"/>
-              <path d="M236 316h12M252 316h16M272 316h22" stroke="#7ef0cf" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Fighter 1 (Red) — Clay Mannequin + 3D Oriented Bounding Box & Skeleton -->
+              <g class="red-bbox">
+                <rect x="218" y="188" width="84" height="128" rx="4" fill="#a75246" fill-opacity="0.07" stroke="#a75246" stroke-width="1.4" stroke-dasharray="5 3"/>
+                <text x="223" y="201" font-size="8.5" font-weight="700" font-family="monospace" fill="#a75246">ID:01 · RED</text>
+                <!-- Clay capsule skeleton -->
+                <circle cx="264" cy="218" r="11" fill="#d9d4e2" stroke="#6f5c80" stroke-width="1.6"/>
+                <path d="M264 229v36M264 238l-22 14M264 238l32-12M264 265l-18 42M264 265l20 42" stroke="#6f5c80" stroke-width="5" stroke-linecap="round"/>
+                <line x1="296" y1="226" x2="338" y2="210" stroke="#a75246" stroke-width="2" stroke-dasharray="3 2"/>
+                <circle cx="264" cy="238" r="3" fill="#a75246"/><circle cx="264" cy="265" r="3" fill="#a75246"/>
+              </g>
 
-              <!-- Robot head (nodding gently + blinking smiling mint eyes + golden spark antenna!) -->
-              <g class="bot-head">
-                <g class="bot-antenna">
-                  <path d="M217 154V132" stroke="#9cc0b6" stroke-width="3" stroke-linecap="round"/>
-                  <circle cx="217" cy="128" r="6.5" fill="#e6b25c" stroke="#fff4d9" stroke-width="1.5"/>
-                  <circle class="spark-float" cx="217" cy="128" r="11" stroke="#f5d08a" stroke-width="1" stroke-dasharray="2 3"/>
+              <!-- Fighter 2 (Blue) — Clay Mannequin + 3D Bounding Box -->
+              <g class="blue-fighter">
+                <rect x="348" y="186" width="84" height="130" rx="4" fill="#4e6e91" fill-opacity="0.07" stroke="#4e6e91" stroke-width="1.4" stroke-dasharray="5 3"/>
+                <text x="353" y="199" font-size="8.5" font-weight="700" font-family="monospace" fill="#4e6e91">ID:02 · BLUE</text>
+                <circle cx="386" cy="216" r="11" fill="#d9d4e2" stroke="#4e6e91" stroke-width="1.6"/>
+                <path d="M386 227v36M386 236l-30-6M386 236l22 14M386 263l-18 44M386 263l20 44" stroke="#4e6e91" stroke-width="5" stroke-linecap="round"/>
+                <line x1="356" y1="230" x2="314" y2="214" stroke="#4e6e91" stroke-width="2" stroke-dasharray="3 2"/>
+              </g>
+
+              <!-- Depth / state readout pill -->
+              <rect x="14" y="354" width="194" height="24" rx="5" fill="#ffffff" fill-opacity="0.88" stroke="#cfc6db"/>
+              <text x="24" y="370" font-size="9.5" font-family="monospace" font-weight="600" fill="#5e4b70">STATE: layout+pose+cam ALIGNED</text>
+            </svg>
+
+            <!-- LAYER 2 (RIGHT / CLIPPED OVERLAY): SUNLIT CLASSICAL GENERATIVE VIDEO RENDER -->
+            <svg class="stage-layer stage-layer-cinema" viewBox="0 0 640 390" fill="none" role="img" aria-label="Rendered sunlit classical Mediterranean courtyard with red and blue classical warriors dueling">
+              <defs>
+                <linearGradient id="cl-sky" x1="0" y1="0" x2="0" y2="265" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#bfe0de"/><stop offset=".55" stop-color="#e9f2ea"/><stop offset="1" stop-color="#fae9c8"/>
+                </linearGradient>
+                <linearGradient id="cl-floor" x1="0" y1="264" x2="0" y2="390" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ece1cb"/><stop offset="1" stop-color="#d7c4a1"/>
+                </linearGradient>
+                <linearGradient id="cl-marble" x1="0" y1="0" x2="1" y2="0">
+                  <stop stop-color="#fffdf8"/><stop offset=".6" stop-color="#efe6d5"/><stop offset="1" stop-color="#d8cab0"/>
+                </linearGradient>
+                <radialGradient id="cl-sun" cx="50%" cy="50%" r="50%">
+                  <stop stop-color="#fff3c4" stop-opacity=".95"/><stop offset=".45" stop-color="#f5c976" stop-opacity=".35"/><stop offset="1" stop-color="#f5c976" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+
+              <!-- Mediterranean sunlit sky + golden sun + drifting clouds -->
+              <rect width="640" height="266" fill="url(#cl-sky)"/>
+              <circle class="sun-glow" cx="534" cy="72" r="68" fill="url(#cl-sun)"/>
+              <circle cx="534" cy="72" r="21" fill="#fff2be"/>
+              <g class="cloud-drift" fill="#ffffff" fill-opacity="0.72">
+                <ellipse cx="140" cy="64" rx="44" ry="13"/><ellipse cx="168" cy="58" rx="30" ry="11"/>
+                <ellipse cx="420" cy="80" rx="48" ry="12"/><ellipse cx="448" cy="74" rx="28" ry="10"/>
+              </g>
+
+              <!-- Distant emerald hills & cypress trees -->
+              <path d="M0 264 L78 206 L154 236 L252 194 L374 230 L492 188 L640 242 V264 Z" fill="#89b09e"/>
+              <path d="M0 264 L110 228 L230 248 L360 218 L510 246 L640 222 V264 Z" fill="#5e8a79"/>
+              <!-- Mediterranean cypress silhouettes -->
+              <g fill="#265446">
+                <ellipse cx="42" cy="204" rx="14" ry="52"/><ellipse cx="64" cy="218" rx="11" ry="40"/>
+                <ellipse cx="596" cy="198" rx="15" ry="56"/><ellipse cx="574" cy="216" rx="11" ry="42"/>
+              </g>
+
+              <!-- Warm travertine courtyard floor + cast sun shadows -->
+              <rect y="264" width="640" height="126" fill="url(#cl-floor)"/>
+              <g stroke="#c6b18e" stroke-width="0.9" opacity="0.75">
+                <line x1="0" y1="264" x2="640" y2="264"/><line x1="0" y1="292" x2="640" y2="292"/><line x1="0" y1="330" x2="640" y2="330"/>
+                <line x1="320" y1="264" x2="320" y2="390"/><line x1="250" y1="264" x2="170" y2="390"/><line x1="390" y1="264" x2="470" y2="390"/>
+              </g>
+
+              <!-- Classical Marble Temple & Colonnade -->
+              <g>
+                <!-- Terracotta roof trim & marble pediment -->
+                <polygon points="70,106 320,40 570,106" fill="#c76f58" stroke="#9e4d3a" stroke-width="1.5"/>
+                <polygon points="84,106 320,49 556,106" fill="#f7f0e2" stroke="#cbb999" stroke-width="1.2"/>
+                <circle cx="320" cy="84" r="11" fill="#d9ad5b" stroke="#a67a2e" stroke-width="1.2"/>
+                <rect x="78" y="106" width="484" height="16" fill="#ebe0cb" stroke="#c7b595" stroke-width="1.2"/>
+                <!-- 6 sunlit fluted marble columns -->
+                <g fill="url(#cl-marble)" stroke="#c7b698" stroke-width="1.1">
+                  <rect x="96" y="122" width="24" height="142"/><rect x="174" y="122" width="24" height="142"/>
+                  <rect x="252" y="122" width="24" height="142"/><rect x="364" y="122" width="24" height="142"/>
+                  <rect x="442" y="122" width="24" height="142"/><rect x="520" y="122" width="24" height="142"/>
                 </g>
-                <!-- Round teal headphones/ears -->
-                <circle cx="176" cy="195" r="13" fill="url(#st-teal)" stroke="#173830" stroke-width="2"/>
-                <circle cx="258" cy="195" r="13" fill="url(#st-teal)" stroke="#173830" stroke-width="2"/>
-                <!-- Head shell -->
-                <rect x="178" y="154" width="78" height="74" rx="26" fill="url(#st-shell)" stroke="#1d3d35" stroke-width="2"/>
-                <!-- Dark visor -->
-                <rect x="188" y="168" width="58" height="46" rx="16" fill="url(#st-visor)" stroke="#2c5950" stroke-width="1.4"/>
-                <!-- Blinking happy mint eyes -->
-                <path class="bot-eye" d="M201 190 Q207 183 213 190" stroke="#7bf4d3" stroke-width="3.6" stroke-linecap="round"/>
-                <path class="bot-eye" d="M225 190 Q231 183 237 190" stroke="#7bf4d3" stroke-width="3.6" stroke-linecap="round"/>
-                <!-- Tiny glowing smile -->
-                <path d="M213 201 Q219 206 225 201" stroke="#5ad6b6" stroke-width="2" stroke-linecap="round"/>
+                <!-- Hanging emerald ivy garlands -->
+                <path d="M120 124 Q147 146 174 124 M198 124 Q225 144 252 124 M388 124 Q415 144 442 124 M466 124 Q493 146 520 124" stroke="#36705d" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <!-- Warm sunlight beam across courtyard -->
+                <polygon points="480,122 570,122 390,390 210,390" fill="#fff3c4" fill-opacity="0.16"/>
               </g>
-            </g>
-          </svg>
 
-          <figcaption class="studio-cap">
-            <span><b>Render-Bot Studio:</b> Upstream 3D proxy <code>s(t) → P(t)</code> rendered live into video.</span>
-            <span>T0–T3b · 336 Works</span>
-          </figcaption>
+              <!-- Ground shadows under fighters -->
+              <ellipse cx="268" cy="312" rx="34" ry="8" fill="#8f7856" fill-opacity="0.34"/>
+              <ellipse cx="388" cy="312" rx="34" ry="8" fill="#8f7856" fill-opacity="0.34"/>
+
+              <!-- Classical Red Warrior (Flowing Crimson Cloak, Bronze Helm, Gladius) -->
+              <g class="red-fighter">
+                <!-- Flowing crimson cape -->
+                <path d="M256 232 C 228 242, 212 268, 206 294 L 252 284 Z" fill="#b84a3c"/>
+                <!-- Tunic & bronze cuirass -->
+                <path d="M252 230 h24 l6 42 h-36 Z" fill="#d96754" stroke="#8f3227" stroke-width="1.3"/>
+                <rect x="255" y="232" width="18" height="24" rx="4" fill="#d9aa5b" stroke="#966c27" stroke-width="1.2"/>
+                <!-- Legs & sandals -->
+                <path d="M258 272 l-12 36 M270 272 l14 36" stroke="#c8946e" stroke-width="6.5" stroke-linecap="round"/>
+                <path d="M242 308 h12 M280 308 h12" stroke="#7c4e28" stroke-width="3.5" stroke-linecap="round"/>
+                <!-- Classical plumed helm & head -->
+                <path d="M252 204 Q264 191 278 205" stroke="#c44536" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="264" cy="217" r="11" fill="#e8ba96" stroke="#9c6c4a" stroke-width="1.2"/>
+                <path d="M253 215 A11 11 0 0 1 275 215 Z" fill="#d9aa5b" stroke="#8c6323" stroke-width="1.2"/>
+                <!-- Bronze shield & sword arm -->
+                <ellipse cx="242" cy="252" rx="11" ry="15" fill="#e0b565" stroke="#8f6624" stroke-width="1.8"/>
+                <path d="M273 238 l24 -11" stroke="#e8ba96" stroke-width="5.5" stroke-linecap="round"/>
+                <line x1="296" y1="227" x2="342" y2="208" stroke="#f0f4f7" stroke-width="3.2" stroke-linecap="round"/>
+                <line x1="296" y1="227" x2="342" y2="208" stroke="#8c9fae" stroke-width="1"/>
+              </g>
+
+              <!-- Classical Blue Warrior (Sapphire Cloak, Silver Helm, Blade) -->
+              <g class="blue-fighter">
+                <!-- Flowing azure cape -->
+                <path d="M394 230 C 422 242, 438 268, 444 294 L 398 282 Z" fill="#355e8a"/>
+                <!-- Tunic & silver cuirass -->
+                <path d="M374 228 h24 l6 42 h-36 Z" fill="#4f7fb0" stroke="#28486b" stroke-width="1.3"/>
+                <rect x="377" y="230" width="18" height="24" rx="4" fill="#d6dfe6" stroke="#6d8194" stroke-width="1.2"/>
+                <!-- Legs -->
+                <path d="M380 270 l-12 38 M392 270 l14 38" stroke="#e3b692" stroke-width="6.5" stroke-linecap="round"/>
+                <path d="M364 308 h12 M402 308 h12" stroke="#5c4734" stroke-width="3.5" stroke-linecap="round"/>
+                <!-- Plumed silver helm & head -->
+                <path d="M372 203 Q386 190 398 204" stroke="#3c6e9c" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="386" cy="215" r="11" fill="#f0c8a8" stroke="#a67956" stroke-width="1.2"/>
+                <path d="M375 213 A11 11 0 0 1 397 213 Z" fill="#cdd8e0" stroke="#617587" stroke-width="1.2"/>
+                <!-- Sword arm clashing & round shield -->
+                <path d="M376 236 l-24 -6" stroke="#f0c8a8" stroke-width="5.5" stroke-linecap="round"/>
+                <line x1="353" y1="230" x2="310" y2="213" stroke="#f4f8fb" stroke-width="3.2" stroke-linecap="round"/>
+                <ellipse cx="408" cy="252" rx="11" ry="15" fill="#4f7fb0" stroke="#d9aa5b" stroke-width="2"/>
+                <!-- Golden spark at sword clash -->
+                <path d="M326 206l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" fill="#ffe184"/>
+              </g>
+
+              <!-- Rendered output badge -->
+              <rect x="436" y="354" width="190" height="24" rx="5" fill="#ffffff" fill-opacity="0.90" stroke="#bdd8ce"/>
+              <text x="446" y="370" font-size="9.5" font-family="monospace" font-weight="700" fill="#1e5246">RENDER: cloth+light+physics</text>
+            </svg>
+
+            <!-- Draggable Golden Shader Wipe Bar -->
+            <div class="stage-divider" id="stage-divider">
+              <div class="stage-handle" aria-hidden="true">⇄</div>
+            </div>
+          </div>
+
+          <div class="stage-slider-row">
+            <span><b>Drag wipe:</b> Clay Proxy</span>
+            <input id="stage-range" type="range" min="6" max="94" value="48" aria-label="Compare upstream 3D clay proxy and rendered sunlit video" />
+            <span>Sunlit Render</span>
+          </div>
         </figure>
       </div>
     </section>
