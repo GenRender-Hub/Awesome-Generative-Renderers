@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond — interactive specification ladder workbench, causality vs real-time explorer, animated survey roadmap, 68-system comparison matrix, and 336-paper library." />
+  <meta name="theme-color" content="#1d5347" />
+  <title>Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond</title>
+  <link rel="canonical" href="https://genrender-hub.github.io/" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">
+        <img src="assets/logo.png" alt="VideoRender" />
+        <span>GENRENDER HUB</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#workbench">Ladder Workbench</a>
+        <a href="#orthogonality">T3a/T3b vs RT</a>
+        <a href="#roadmap">Survey Roadmap</a>
+        <a href="#matrix">System Matrix</a>
+        <a href="#library">Library (336)</a>
+        <a class="nav-cta" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-top">
+        <div class="eyebrow">
+          <span class="pulse-dot"></span>
+          <span>Living Survey Companion · November 2026</span>
+        </div>
+
+        <h1>Video Models as Generative Renderers:</h1>
+        <p class="hero-sub">Foundations, Interfaces, Systems, and Beyond</p>
+
+        <ul class="authors" aria-label="Authors">
+          <li>Xinye Li<sup>1</sup><span class="r-star">★</span><span class="r-lead">✦</span></li>
+          <li>Liuzhou Zhang<sup>2</sup><span class="r-star">★</span></li>
+          <li>Te Sun<sup>3</sup><span class="r-star">★</span></li>
+          <li>Shipeng Luo<sup>4</sup><span class="r-star">★</span></li>
+          <li>Lingshuai Lin<sup>5</sup><span class="r-star">★</span></li>
+          <li>Yijie Jin<sup>3</sup><span class="r-star">★</span></li>
+          <li>Zirui Lang<sup>3</sup><span class="r-star">★</span></li>
+          <li>Guian Fang<sup>6</sup><span class="r-star">★</span></li>
+          <li>Haoqin Hong<sup>7,8</sup></li>
+          <li>Xuyang Liu<sup>9</sup></li>
+          <li>Yuxuan Tian<sup>4</sup></li>
+          <li>Shihong Huang<sup>4</sup></li>
+          <li>Yuzhe Chen<sup>10</sup></li>
+          <li>Jiarui Chen<sup>5</sup></li>
+          <li>Jiaxin Fang<sup>5</sup></li>
+          <li>Kexu Cheng<sup>11</sup></li>
+          <li>Hanqing Wang<sup>2</sup></li>
+          <li>Xiangnan Wu<sup>4</sup></li>
+          <li>Jingwen Wu<sup>7</sup></li>
+          <li>Haojing Chen<sup>12</sup></li>
+          <li>Haodong Chen<sup>13</sup></li>
+          <li>Disen Lan<sup>5</sup></li>
+          <li>Yuanlei Wang<sup>14</sup></li>
+          <li>Ye Huang<sup>15</sup></li>
+          <li>Zhenhao Zhang<sup>12</sup></li>
+          <li>Dengpeng Wu<sup>12</sup></li>
+          <li>Tinghe Zhang<sup>4</sup></li>
+          <li>Wulin Xie<sup>4</sup></li>
+          <li>Shu Wu<sup>4</sup><span class="r-sen">◆</span></li>
+          <li>Yan Huang<sup>4</sup><span class="r-sen">◆</span></li>
+          <li>Wai Lam<sup>1</sup><span class="r-sen">◆</span></li>
+        </ul>
+
+        <div class="aff-line">
+          <span><sup>1</sup>CUHK</span><span><sup>2</sup>HKUST(GZ)</span><span><sup>3</sup>SJTU</span>
+          <span><sup>4</sup>CASIA</span><span><sup>5</sup>FDU</span><span><sup>6</sup>NUS</span>
+          <span><sup>7</sup>USTC</span><span><sup>8</sup>CityUHK</span><span><sup>9</sup>PolyU</span>
+          <span><sup>10</sup>TJU</span><span><sup>11</sup>UCAS</span><span><sup>12</sup>THU</span>
+          <span><sup>13</sup>HKUST</span><span><sup>14</sup>SYSU</span><span><sup>15</sup>PKU</span>
+        </div>
+
+        <div class="role-legend">
+          <span><span class="r-star">★</span> <b>Core Contributors</b></span>
+          <span><span class="r-lead">✦</span> <b>Project Lead</b></span>
+          <span><span class="r-sen">◆</span> <b>Senior Authors</b></span>
+          <span><b>Contact:</b> <a href="mailto:xyli@se.cuhk.edu.hk" style="color:var(--teal);text-decoration:underline;">xyli@se.cuhk.edu.hk</a></span>
+        </div>
+
+        <div class="lockup-wall" aria-label="Participating Institutions">
+          <img class="wide" src="assets/lockups/cuhk.png" alt="CUHK" />
+          <img class="tall" src="assets/lockups/hkustgz.png" alt="HKUST(GZ)" />
+          <img src="assets/lockups/sjtu.png" alt="SJTU" />
+          <img class="wide" src="assets/lockups/casia.png" alt="CASIA" />
+          <img src="assets/lockups/fdu.png" alt="Fudan University" />
+          <img src="assets/lockups/nus.png" alt="NUS" />
+          <img class="wide" src="assets/lockups/ustc.png" alt="USTC" />
+          <img src="assets/lockups/cityuhk.png" alt="CityUHK" />
+          <img src="assets/lockups/polyu.png" alt="PolyU" />
+          <img class="tall" src="assets/lockups/tju.png" alt="Tianjin University" />
+          <img class="wide" src="assets/lockups/ucas.png" alt="UCAS" />
+          <img class="tall" src="assets/lockups/thu.png" alt="Tsinghua University" />
+          <img class="tall" src="assets/lockups/hkust.png" alt="HKUST" />
+          <img class="tall" src="assets/lockups/sysu.png" alt="Sun Yat-sen University" />
+          <img class="tall" src="assets/lockups/pku.png" alt="Peking University" />
+        </div>
+
+        <p class="hero-thesis">
+          Frontier video generation is shifting from open-ended content invention toward <b>faithful conditional rendering</b>: layout, identity, physical mechanics, and interactive state move upstream, while the video model preserves what is specified and synthesizes the visual detail left open.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#workbench">Try Interactive Ladder ↓</a>
+          <a class="btn" href="#roadmap">Interactive Roadmap</a>
+          <a class="btn" href="#matrix">System Matrix (68)</a>
+          <a class="btn" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers" target="_blank" rel="noopener">Awesome GitHub ↗</a>
+          <a class="btn" href="references.bib" download>Download .bib (336)</a>
+        </div>
+
+        <div class="kpi-strip">
+          <div class="kpi"><strong id="stat-cited">336</strong><span>Cited Works</span></div>
+          <div class="kpi"><strong id="stat-systems">68</strong><span>Compared Systems</span></div>
+          <div class="kpi"><strong id="stat-t3">50</strong><span>Tier-3 Renderers</span></div>
+          <div class="kpi"><strong id="stat-bench">29</strong><span>Benchmarks</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 1: Native Interactive Specification Ladder Workbench -->
+    <section class="sec" id="workbench">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Interactive Framework · Ch. 2</div>
+            <h2>The Specification Ladder Workbench</h2>
+          </div>
+          <p>Step through Tiers 0 to 3b to watch how upstream inputs, the 2×4 factor precision contract, visual memory, and failure modes transform in real time.</p>
+        </div>
+
+        <div class="workbench">
+          <div class="wb-tabs">
+            <div class="tier-switcher" id="tier-switcher">
+              <button type="button" class="tier-tab" data-tier="T0" style="--tab-c:#1d5347;"><span class="t-dot"></span>T0 · Text</button>
+              <button type="button" class="tier-tab" data-tier="T1" style="--tab-c:#ad7e34;"><span class="t-dot"></span>T1 · Subject Ref</button>
+              <button type="button" class="tier-tab" data-tier="T2" style="--tab-c:#a94f42;"><span class="t-dot"></span>T2 · Composed</button>
+              <button type="button" class="tier-tab active" data-tier="T3a" style="--tab-c:#765885;"><span class="t-dot"></span>T3a · Pre-Fixed Structure</button>
+              <button type="button" class="tier-tab" data-tier="T3b" style="--tab-c:#3f668c;"><span class="t-dot"></span>T3b · Causal Stream</button>
+            </div>
+            <div class="wb-controls">
+              <button type="button" class="mini-btn" id="wb-autoplay">▶ Auto-Step</button>
+            </div>
+          </div>
+
+          <div class="wb-body">
+            <!-- Left: Live Pipeline SVG + Description -->
+            <div class="wb-left">
+              <div class="wb-stage-head">
+                <h3 class="wb-tier-title" id="wb-title">Tier 3a — Pre-Fixed External Structure</h3>
+                <span class="wb-lineage-pill" id="wb-lineage">Geometry + Appearance Lineages Converge</span>
+              </div>
+              <p class="wb-desc" id="wb-desc"></p>
+
+              <div class="pipe-svg-wrap">
+                <svg class="pipe-svg" viewBox="0 0 640 220" role="img" aria-label="Dynamic generative rendering pipeline diagram">
+                  <defs>
+                    <marker id="arr-main" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d5347" />
+                    </marker>
+                    <marker id="arr-mem" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3f668c" />
+                    </marker>
+                  </defs>
+
+                  <!-- Node 1: Upstream Specifier -->
+                  <rect id="svg-box-up" x="14" y="34" width="160" height="92" rx="12" fill="#efe9f4" stroke="#765885" stroke-width="1.8" />
+                  <text x="94" y="56" text-anchor="middle" font-size="10" font-weight="700" fill="#765885" letter-spacing="0.8">UPSTREAM SPECIFIER</text>
+                  <text id="svg-up-main" x="94" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#13201d">Artist / Code / Engine</text>
+                  <text id="svg-up-sub" x="94" y="100" text-anchor="middle" font-size="10.5" fill="#5d6e69">Pre-fixed clip S(1:T)</text>
+
+                  <!-- Arrow 1 -> 2 -->
+                  <line x1="176" y1="80" x2="226" y2="80" stroke="#1d5347" stroke-width="2.2" class="flow-dash" marker-end="url(#arr-main)" />
+                  <text id="svg-edge-1" x="201" y="69" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1d5347">Aligned</text>
+
+                  <!-- Node 2: Generative Renderer -->
+                  <rect id="svg-box-ren" x="232" y="26" width="204" height="108" rx="14" fill="#ffffff" stroke="#1d5347" stroke-width="2" />
+                  <text x="334" y="48" text-anchor="middle" font-size="10" font-weight="700" fill="#1d5347" letter-spacing="0.8">VIDEO MODEL (RENDERER)</text>
+                  <text id="svg-ren-main" x="334" y="72" text-anchor="middle" font-size="13.5" font-weight="700" fill="#13201d">Conditional Synthesis</text>
+                  <text id="svg-ren-sub1" x="334" y="94" text-anchor="middle" font-size="10.5" fill="#2e403b">Preserves specified layout &amp; motion</text>
+                  <text id="svg-ren-sub2" x="334" y="112" text-anchor="middle" font-size="10.5" fill="#5d6e69">Invents lighting, cloth, textures</text>
+
+                  <!-- Arrow 2 -> 3 -->
+                  <line x1="438" y1="80" x2="486" y2="80" stroke="#1d5347" stroke-width="2.2" class="flow-dash" marker-end="url(#arr-main)" />
+
+                  <!-- Node 3: Rendered Video -->
+                  <rect x="492" y="34" width="134" height="92" rx="12" fill="#e6f3ee" stroke="#1d5347" stroke-width="1.8" />
+                  <text x="559" y="56" text-anchor="middle" font-size="10" font-weight="700" fill="#1d5347" letter-spacing="0.8">OUTPUT VIDEO</text>
+                  <text id="svg-out-main" x="559" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#13201d">Clip Y(1:T)</text>
+                  <text id="svg-out-sub" x="559" y="100" text-anchor="middle" font-size="10.5" fill="#5d6e69">Adheres to S(1:T)</text>
+
+                  <!-- Visual Memory / Live Action Feedback Loop (illuminates at T3b!) -->
+                  <g id="svg-mem-loop" class="mem-loop" opacity="0.22">
+                    <path d="M 559 128 L 559 182 L 334 182 L 334 139" fill="none" stroke="#3f668c" stroke-width="2" class="flow-dash" marker-end="url(#arr-mem)" />
+                    <rect x="372" y="167" width="148" height="28" rx="14" fill="#e7f0f8" stroke="#3f668c" stroke-width="1.2" />
+                    <text x="446" y="185" text-anchor="middle" font-size="10" font-weight="700" fill="#3f668c">Visual Memory m(k) · Appearance Only</text>
+
+                    <path d="M 94 182 L 94 131" fill="none" stroke="#ad7e34" stroke-width="2" class="flow-dash" marker-end="url(#arr-main)" />
+                    <rect x="24" y="167" width="144" height="28" rx="14" fill="#f7eedc" stroke="#ad7e34" stroke-width="1.2" />
+                    <text x="96" y="185" text-anchor="middle" font-size="10" font-weight="700" fill="#8b6120">Live Actions a(t) → s(t+1)</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right: Live 2x4 Factor Matrix + Courtyard Duel Diagnostic -->
+            <div class="wb-right">
+              <div class="factor-card">
+                <div class="factor-card-head">
+                  <h4>2×4 Factor Precision Contract</h4>
+                  <div class="prec-legend">
+                    <span><i class="p-sw open"></i>Open</span>
+                    <span><i class="p-sw described"></i>Described</span>
+                    <span><i class="p-sw exemplified"></i>Exemplified</span>
+                    <span><i class="p-sw aligned"></i>Aligned</span>
+                  </div>
+                </div>
+                <div class="factor-row" id="row-appearance"></div>
+                <div class="factor-row" id="row-structure"></div>
+              </div>
+
+              <div class="duel-box">
+                <p class="duel-title">Running Example · Two Fighters in a Courtyard (0:04 Knockdown)</p>
+                <div class="duel-grid">
+                  <div class="duel-row"><b>Upstream input:</b> <span id="duel-up"></span></div>
+                  <div class="duel-row"><b>Synthesized by renderer:</b> <span id="duel-syn"></span></div>
+                  <div class="duel-fail"><b>Characteristic failure traded into:</b> <span id="duel-fail"></span></div>
+                </div>
+                <div class="duel-meta">
+                  <span id="duel-auth"></span>
+                  <a href="#library" class="wb-filter-link" id="wb-jump-lib">Filter papers in this tier →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <details class="paper-fig-details">
+          <summary>Optional · View full printed paper schematics (Figure 1 Teaser &amp; Figure 4 Ladder)</summary>
+          <img src="assets/teaser.png" alt="Figure 1 Teaser" onclick="openLightbox(this.src)" />
+        </details>
+      </div>
+    </section>
+
+    <!-- MODULE 2: T3a/T3b vs Real-Time Orthogonality Explorer -->
+    <section class="sec alt" id="orthogonality">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Conceptual Boundary · Sec. 2.3 &amp; Ch. 7</div>
+            <h2>Causality (T3a vs. T3b) Is Orthogonal to Real-Time Speed</h2>
+          </div>
+          <p>Are there real-time / fast T3a renderers? Yes — inference speed is a deployment optimization (distillation, serving), whereas T3a vs. T3b is defined strictly by whether upstream structure is pre-fixed or causally updated mid-generation.</p>
+        </div>
+
+        <div class="ortho-shell">
+          <div class="ortho-axis-bar">
+            <span>Spec Causality ↓</span>
+            <span>← Sub-Real-Time / Multi-Step Diffusion</span>
+            <span>Real-Time / Fast Distilled Variants →</span>
+          </div>
+
+          <div class="quad-grid">
+            <!-- Row 1: T3a -->
+            <div class="y-label t3a">
+              <span>Tier 3a</span>
+              <small>Pre-fixed clip S(1:T)<br />before sampling</small>
+            </div>
+            <div class="quad-cell">
+              <div class="quad-head">
+                <h4>T3a · Clip-Level Quality Renderers</h4>
+                <span class="quad-count" id="q-t3a-slow-cnt">23 systems</span>
+              </div>
+              <p class="quad-desc">Full-sequence bidirectional attention (20–50 steps) over pre-authored clay, G-buffers, or Blender/Three.js drafts.</p>
+              <div class="chip-cloud" id="q-t3a-slow"></div>
+            </div>
+            <div class="quad-cell highlight-var">
+              <div class="quad-head">
+                <h4>T3a · Fast Distilled / Streaming Variants</h4>
+                <span class="quad-count" id="q-t3a-fast-cnt">3 systems</span>
+              </div>
+              <p class="quad-desc">Fast few-step clip rendering (e.g., 8-step distillation) remains <b>T3a</b> when structure is fixed up front; systems below ship a primary T3a clip model plus a secondary fast/causal variant.</p>
+              <div class="chip-cloud" id="q-t3a-fast"></div>
+            </div>
+
+            <!-- Row 2: T3b -->
+            <div class="y-label t3b">
+              <span>Tier 3b</span>
+              <small>Causal stream from<br />evolving state s(t)</small>
+            </div>
+            <div class="quad-cell">
+              <div class="quad-head">
+                <h4>T3b · Sub-Real-Time Causal &amp; Stateful Turns</h4>
+                <span class="quad-count" id="q-t3b-slow-cnt">10 systems</span>
+              </div>
+              <p class="quad-desc">Strictly causal or multi-turn stateful execution (cannot peek at future states), even when throughput is ~1 FPS or several seconds per chunk.</p>
+              <div class="chip-cloud" id="q-t3b-slow"></div>
+            </div>
+            <div class="quad-cell highlight-rt">
+              <div class="quad-head">
+                <h4>T3b · Real-Time Interactive Renderers</h4>
+                <span class="quad-count" id="q-t3b-fast-cnt">14 systems</span>
+              </div>
+              <p class="quad-desc">Few-step distilled causal chunk/frame renderers driven live by game engines, physics simulators, or agent harnesses at interactive frame rates (13–83 FPS).</p>
+              <div class="chip-cloud" id="q-t3b-fast"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 3: Native Interactive Survey Roadmap -->
+    <section class="sec" id="roadmap">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Interactive Reading Map · Sec. 1.7</div>
+            <h2>Survey Roadmap (Chapters 2–11)</h2>
+          </div>
+          <p>Click any chapter node to inspect its central research question, technical bottleneck, and representative literature across the generative rendering pipeline.</p>
+        </div>
+
+        <div class="roadmap-shell">
+          <div class="roadmap-stage">
+            <!-- Lane 1: Foundations & Drivers -->
+            <div class="rm-lane">
+              <div class="rm-lane-title"><span>Phase I · Conceptual Foundations &amp; Applications</span><span>Ch. 2 → Ch. 3</span></div>
+              <div class="rm-nodes">
+                <button type="button" class="rm-node active" data-ch="2" style="--node-c:#1d5347;">
+                  <span class="rm-num">CH. 02</span>
+                  <strong>Framework</strong>
+                  <small>Factors, ladder, contract</small>
+                </button>
+                <span class="rm-arrow">→</span>
+                <button type="button" class="rm-node" data-ch="3" style="--node-c:#3b7568;">
+                  <span class="rm-num">CH. 03</span>
+                  <strong>Driving Domains</strong>
+                  <small>Film, games, embodied sim</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="rm-connector">↓ Tier-3 specification enters the renderer pipeline ↓</div>
+
+            <!-- Lane 2: Tier-3 Renderer Pipeline (Ch. 4 -> 8) -->
+            <div class="rm-lane pipe">
+              <div class="rm-lane-title"><span>Phase II · Tier-3 Renderer Core Pipeline</span><span>Ch. 4 → Ch. 5 → Ch. 6 → Ch. 7 → Ch. 8</span></div>
+              <div class="rm-nodes">
+                <button type="button" class="rm-node" data-ch="4" style="--node-c:#765885;">
+                  <span class="rm-num">CH. 04</span>
+                  <strong>Interfaces</strong>
+                  <small>Source, format, pathway</small>
+                </button>
+                <span class="rm-arrow">→</span>
+                <button type="button" class="rm-node" data-ch="5" style="--node-c:#3f668c;">
+                  <span class="rm-num">CH. 05</span>
+                  <strong>Interpretation</strong>
+                  <small>Binding &amp; selective reading</small>
+                </button>
+                <span class="rm-arrow">→</span>
+                <button type="button" class="rm-node" data-ch="6" style="--node-c:#6b527a;">
+                  <span class="rm-num">CH. 06</span>
+                  <strong>Training</strong>
+                  <small>Paired data &amp; distillation</small>
+                </button>
+                <span class="rm-arrow">→</span>
+                <button type="button" class="rm-node" data-ch="7" style="--node-c:#ad7e34;">
+                  <span class="rm-num">CH. 07</span>
+                  <strong>Streaming</strong>
+                  <small>Tier-3b runtime &amp; KV</small>
+                </button>
+                <span class="rm-arrow">→</span>
+                <button type="button" class="rm-node" data-ch="8" style="--node-c:#a94f42;">
+                  <span class="rm-num">CH. 08</span>
+                  <strong>Evaluation</strong>
+                  <small>Adherence benchmarks</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="rm-connector">↓ Paradigm test &amp; forward outlook ↓</div>
+
+            <!-- Lane 3: Competing Paths & Outlook -->
+            <div class="rm-lane">
+              <div class="rm-lane-title"><span>Phase III · Competing Paradigms &amp; Future Directions</span><span>Ch. 9 → Ch. 10–11</span></div>
+              <div class="rm-nodes">
+                <button type="button" class="rm-node" data-ch="9" style="--node-c:#3f668c;">
+                  <span class="rm-num">CH. 09</span>
+                  <strong>Competing Paths</strong>
+                  <small>Implicit WMs &amp; code-only</small>
+                </button>
+                <span class="rm-arrow">→</span>
+                <button type="button" class="rm-node" data-ch="10" style="--node-c:#13201d;">
+                  <span class="rm-num">CH. 10–11</span>
+                  <strong>Open Problems &amp; Outlook</strong>
+                  <small>6 open directions &amp; tests</small>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Chapter Inspector -->
+          <aside class="roadmap-inspector" id="roadmap-inspector">
+            <span class="ri-badge" id="ri-badge">CH. 02 · FRAMEWORK</span>
+            <h3 id="ri-title">Definition and Framework</h3>
+            <p class="ri-q" id="ri-desc"></p>
+            <div class="ri-box">
+              <b>Core Technical Bottleneck</b>
+              <span id="ri-bottle"></span>
+            </div>
+            <div class="ri-box">
+              <b>Key Concepts &amp; Systems</b>
+              <span id="ri-keys"></span>
+            </div>
+            <div class="ri-actions">
+              <button type="button" class="btn primary" id="ri-filter-btn">Filter Library for This Chapter →</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 4: System Comparison Matrix (68 Systems) -->
+    <section class="sec alt" id="matrix">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Appendix Master Table · Verified Schema</div>
+            <h2>System Comparison Matrix (68 Systems)</h2>
+          </div>
+          <p>Full live comparison of 26 T3a pre-fixed renderers, 24 T3b streamed/stateful renderers, and 18 T1–T2 reference-conditioned systems — with clean formatting and explicit RT speed badges.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="pills" id="matrix-pills">
+            <button type="button" class="pill active" data-mt="all">All (68)</button>
+            <button type="button" class="pill" data-mt="T3b">T3b Streamed (24)</button>
+            <button type="button" class="pill" data-mt="T3a">T3a Pre-fixed (26)</button>
+            <button type="button" class="pill" data-mt="T1-2">T1–T2 Ref (18)</button>
+            <button type="button" class="pill" data-mt="rt">⚡ Real-Time Only</button>
+          </div>
+          <input id="matrix-search" class="search-in" type="search" placeholder="Filter system, engine, injection, dataset..." />
+        </div>
+
+        <div class="table-scroll" tabindex="0">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>System</th>
+                <th>Settled Upstream</th>
+                <th>Renderer Inputs</th>
+                <th>State Owner</th>
+                <th>Injection</th>
+                <th>Training Data</th>
+                <th>RT / Speed</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 5: Searchable Paper & Benchmark Library (336 works) -->
+    <section class="sec" id="library">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Verified Bibliography · 336 Works</div>
+            <h2>Searchable Research Library</h2>
+          </div>
+          <p>Every cited paper in the survey, filterable by research track, publication year, and real-time capability, with one-click BibTeX copy.</p>
+        </div>
+
+        <div class="lib-grid">
+          <aside class="lib-side">
+            <span class="flbl">Research Track</span>
+            <div id="track-filters"></div>
+
+            <label class="flbl" for="year-filter">Publication Year</label>
+            <select id="year-filter"><option value="all">All years</option></select>
+
+            <label class="chk">
+              <input type="checkbox" id="rt-only" />
+              <span>Real-time systems only</span>
+            </label>
+
+            <button type="button" class="reset-lnk" id="reset-filters">Reset all filters</button>
+            <a class="bib-dl" href="references.bib" download>↓ Download full references.bib (336)</a>
+          </aside>
+
+          <div>
+            <div class="lib-search-row">
+              <input id="lib-search" class="search-in" type="search" placeholder="Search title, author, arXiv ID, backbone, benchmark..." />
+              <select id="lib-sort" class="search-in" style="min-width:140px;flex:none;">
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+                <option value="title">Title A–Z</option>
+              </select>
+            </div>
+            <div class="lib-meta">
+              <span id="results-count">Loading...</span>
+              <span>One-click BibTeX on every entry</span>
+            </div>
+            <div id="paper-list"></div>
+            <div style="text-align:center;margin-top:22px;">
+              <button type="button" class="btn" id="load-more" style="display:none;">Show more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cite & Contribute -->
+    <section class="sec alt" id="cite">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Citation &amp; Community</div>
+            <h2>Cite or Contribute</h2>
+          </div>
+          <p>Contributions of new Tier-3 generative renderers, streaming stacks, and adherence benchmarks are warmly welcomed via Pull Request.</p>
+        </div>
+        <div class="cite-grid">
+          <div class="bib-card">
+            <button type="button" class="bib-copy" id="copy-survey-bib">Copy BibTeX</button>
+            <pre id="survey-bibtex">@article{li2026generativerenderers,
+  title   = {Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond},
+  author  = {Li, Xinye and Zhang, Liuzhou and Sun, Te and Luo, Shipeng and Lin, Lingshuai and Jin, Yijie and Lang, Zirui and Fang, Guian and others and Wu, Shu and Huang, Yan and Lam, Wai},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</pre>
+          </div>
+          <div class="contrib-box">
+            <h3>Submit a Paper or Update</h3>
+            <p>Open a Pull Request on <b>GenRender-Hub/Awesome-Generative-Renderers</b> with a verified arXiv link, tier placement, and BibTeX entry.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <a class="btn primary" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers/issues/new" target="_blank" rel="noopener">Open Issue / PR ↗</a>
+              <a class="btn" href="mailto:xyli@se.cuhk.edu.hk">Email Lead</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <span>GenRender-Hub · Video Models as Generative Renderers (November 2026)</span>
+      <div class="foot-links">
+        <a href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers" target="_blank" rel="noopener">GitHub Repo</a>
+        <a href="references.bib" download>references.bib</a>
+        <a href="mailto:xyli@se.cuhk.edu.hk">xyli@se.cuhk.edu.hk</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lb" id="lightbox" onclick="this.classList.remove('open')">
+    <img id="lb-img" src="" alt="Expanded figure" />
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
