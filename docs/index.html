@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond — interactive specification ladder workbench, causality vs real-time explorer, animated survey roadmap, 68-system comparison matrix, and 336-paper library." />
-  <meta name="theme-color" content="#1d5347" />
-  <title>Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond</title>
+  <meta name="description" content="Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond — animated renderer studio, 4-lineage interactive metro evolution map, causality vs real-time explorer, 68-system matrix, and 336-paper library." />
+  <meta name="theme-color" content="#1e5246" />
+  <title>GenRender — Video Models as Generative Renderers</title>
   <link rel="canonical" href="https://genrender-hub.github.io/" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,32 +18,258 @@
     <div class="header-inner">
       <a class="brand" href="#top">
         <img src="assets/logo.png" alt="VideoRender" />
-        <span>GENRENDER HUB</span>
+        <span>GENERATIVE <b>RENDERERS</b></span>
       </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#workbench">Ladder Workbench</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#perspective">Specification Ladder</a>
+        <a href="#metro-roadmap">Evolution Roadmap</a>
         <a href="#orthogonality">T3a/T3b vs RT</a>
-        <a href="#roadmap">Survey Roadmap</a>
         <a href="#matrix">System Matrix</a>
         <a href="#library">Library (336)</a>
-        <a class="nav-cta" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="nav-github" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="wrap hero-top">
-        <div class="eyebrow">
-          <span class="pulse-dot"></span>
-          <span>Living Survey Companion · November 2026</span>
+    <!-- SPLIT HERO WITH ANIMATED RENDER-BOT STUDIO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> Preprint · November 2026</div>
+          <h1 id="hero-title">
+            <span class="title-line">Video Models</span>
+            <span class="title-line title-as">as</span>
+            <span class="title-line title-accent">Generative Renderers<span class="title-dot">.</span></span>
+          </h1>
+          <p class="hero-sub">Foundations, Interfaces, Systems, and Beyond</p>
+
+          <ul class="hero-keywords" aria-label="Survey keywords">
+            <li>Generative Rendering</li>
+            <li>Specification Ladder</li>
+            <li>Structural Proxies</li>
+            <li>Causal Streaming</li>
+            <li>World State vs. Visual Memory</li>
+          </ul>
+
+          <nav class="hero-actions" aria-label="Survey resources">
+            <a class="resource-link is-primary" href="#metro-roadmap">
+              <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.5 8l4.2 7.8M17.5 8l-4.2 7.8"/></svg>
+              <span>Evolution Roadmap</span>
+            </a>
+            <a class="resource-link" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers" target="_blank" rel="noopener">
+              <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.3-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.4 6.2-6.5a5.1 5.1 0 0 0-1.4-3.5 4.8 4.8 0 0 0-.1-3.5s-1.2-.4-3.8 1.3a13 13 0 0 0-6.8 0C5.6 1.1 4.4 1.5 4.4 1.5a4.8 4.8 0 0 0-.1 3.5 5.1 5.1 0 0 0-1.4 3.5c0 5.1 3.2 6.2 6.2 6.5a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="resource-link" href="#matrix">
+              <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>
+              <span>System Matrix (68)</span>
+            </a>
+            <a class="resource-link" href="#library">
+              <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span>Library (336)</span>
+            </a>
+            <a class="resource-link" href="#cite">
+              <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11H5a6 6 0 0 1 5-6M5 11h5v7H4v-5a2 2 0 0 1 1-2Zm15 0h-5a6 6 0 0 1 5-6m-5 6h5v7h-6v-5a2 2 0 0 1 1-2Z"/></svg>
+              <span>Cite</span>
+            </a>
+            <a class="resource-link" href="mailto:xyli@se.cuhk.edu.hk">
+              <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+              <span>Contact</span>
+            </a>
+          </nav>
         </div>
 
-        <h1>Video Models as Generative Renderers:</h1>
-        <p class="hero-sub">Foundations, Interfaces, Systems, and Beyond</p>
+        <!-- BESPOKE ANIMATED RENDER-BOT STUDIO ILLUSTRATION -->
+        <figure class="render-studio" id="render-studio" data-paused="false">
+          <div class="studio-bar">
+            <span class="studio-bar-left"><i aria-hidden="true"></i> INSIDE THE RENDERER STUDIO</span>
+            <button type="button" class="studio-toggle" id="studio-toggle" aria-pressed="false">⏸ Pause</button>
+          </div>
 
-        <ul class="authors" aria-label="Authors">
+          <svg class="studio-svg" viewBox="0 0 640 415" fill="none" role="img" aria-label="An animated generative renderer robot at its dual-screen studio turning a 3D wireframe proxy into sunlit photoreal video">
+            <defs>
+              <linearGradient id="st-room" x1="60" y1="20" x2="580" y2="360" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#20332e"/><stop offset="1" stop-color="#14232c"/>
+              </linearGradient>
+              <linearGradient id="st-shell" x1="175" y1="145" x2="255" y2="235" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffffff"/><stop offset=".55" stop-color="#ebf2ef"/><stop offset="1" stop-color="#b8cec7"/>
+              </linearGradient>
+              <linearGradient id="st-visor" x1="185" y1="168" x2="245" y2="218" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#143230"/><stop offset="1" stop-color="#09161a"/>
+              </linearGradient>
+              <linearGradient id="st-teal" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#7ef0cf"/><stop offset=".45" stop-color="#2ca184"/><stop offset="1" stop-color="#185a4a"/>
+              </linearGradient>
+              <linearGradient id="st-sky" x1="352" y1="118" x2="546" y2="226" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2c4d66"/><stop offset=".55" stop-color="#4d7a7d"/><stop offset="1" stop-color="#c99b6a"/>
+              </linearGradient>
+              <linearGradient id="st-beam" x1="0" y1="0" x2="1" y2="0">
+                <stop stop-color="#7ef0cf" stop-opacity="0"/><stop offset="1" stop-color="#7ef0cf" stop-opacity=".42"/>
+              </linearGradient>
+              <radialGradient id="st-lamp-glow"><stop stop-color="#f3c57c" stop-opacity=".22"/><stop offset="1" stop-color="#f3c57c" stop-opacity="0"/></radialGradient>
+              <radialGradient id="st-screen-glow"><stop stop-color="#58dfb8" stop-opacity=".14"/><stop offset="1" stop-color="#58dfb8" stop-opacity="0"/></radialGradient>
+              <clipPath id="st-main-clip"><rect x="352" y="118" width="194" height="106" rx="6"/></clipPath>
+              <clipPath id="st-tl-clip"><rect x="344" y="236" width="208" height="44" rx="5"/></clipPath>
+            </defs>
+
+            <!-- Warm studio backdrop -->
+            <path d="M36 324V132C36 66 94 26 176 26H468C554 26 604 74 604 142V324Z" fill="url(#st-room)"/>
+            <ellipse cx="320" cy="390" rx="260" ry="15" fill="#0c1514" fill-opacity=".65"/>
+            <ellipse cx="445" cy="200" rx="185" ry="135" fill="url(#st-screen-glow)"/>
+            <ellipse cx="148" cy="296" rx="115" ry="48" fill="url(#st-lamp-glow)"/>
+
+            <!-- Wall shelf with books & studio plant -->
+            <g stroke="#6c877f" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M74 86H202M86 87v7M190 87v7" stroke-width="2"/>
+              <rect x="86" y="59" width="10" height="25" rx="2" fill="#8f729f" stroke="#b69bc4"/>
+              <rect x="100" y="52" width="13" height="32" rx="2" fill="#c29557" stroke="#e2b980"/>
+              <rect x="117" y="61" width="10" height="23" rx="2" fill="#528275" stroke="#85b5a7"/>
+              <!-- Potted plant -->
+              <path d="M156 67h24l-4 17h-16Z" fill="#a86353" stroke="#cf8b7b"/>
+              <path d="M168 67V48M168 60c-13-1-18-10-16-14 9-2 17 5 16 14Zm0-6c11 0 19-8 18-13-12-2-20 4-18 13Z" fill="#5fb497" stroke="#96dfc5" stroke-width="1.4"/>
+            </g>
+
+            <!-- Hanging Spec Ladder Mini-Storyboard (T0 -> T3) -->
+            <g>
+              <rect x="480" y="42" width="96" height="44" rx="7" fill="#1e2f2c" stroke="#4f6d65"/>
+              <rect x="488" y="52" width="16" height="22" rx="3" fill="#2c6356"/>
+              <rect x="508" y="52" width="16" height="22" rx="3" fill="#ad803b"/>
+              <rect x="528" y="52" width="16" height="22" rx="3" fill="#a75246"/>
+              <rect x="548" y="52" width="16" height="22" rx="3" fill="#785c84"/>
+              <text x="496" y="66" text-anchor="middle" fill="#e9f7f2" font-size="7" font-weight="700">T0</text>
+              <text x="516" y="66" text-anchor="middle" fill="#fff7e6" font-size="7" font-weight="700">T1</text>
+              <text x="536" y="66" text-anchor="middle" fill="#ffece8" font-size="7" font-weight="700">T2</text>
+              <text x="556" y="66" text-anchor="middle" fill="#f5ecf9" font-size="7" font-weight="700">T3</text>
+            </g>
+
+            <!-- LEFT MINI-MONITOR: UPSTREAM 3D WIREFRAME / CLAY PROXY -->
+            <rect x="58" y="138" width="108" height="114" rx="10" fill="#273a36" stroke="#65887e" stroke-width="1.8"/>
+            <rect x="65" y="146" width="94" height="96" rx="6" fill="#101c1d"/>
+            <text x="112" y="158" text-anchor="middle" fill="#89c9b8" font-size="6.4" font-weight="700" letter-spacing="1.1">UPSTREAM 3D PROXY</text>
+            <!-- Wireframe floor grid + 3D cube + camera frustum -->
+            <g class="wire-spin">
+              <path d="M74 222L92 204H132L150 222Z" stroke="#4b7b70" stroke-width="1" fill="#1b3532" fill-opacity=".45"/>
+              <path d="M84 213H140M112 204V222" stroke="#4b7b70" stroke-width=".7"/>
+              <!-- Wireframe cube (proxy character/scene) -->
+              <polygon points="112,174 128,183 128,203 112,212 96,203 96,183" fill="#785c84" fill-opacity=".35" stroke="#c7a5dc" stroke-width="1.3"/>
+              <path d="M112 174v38M96 183l16 9 16-9" stroke="#e4ccf2" stroke-width="1"/>
+              <!-- Camera frustum cone -->
+              <path d="M76 184l14-7v18l-14-7Z" fill="#e6b76c" fill-opacity=".4" stroke="#f2ca85" stroke-width="1.1"/>
+            </g>
+            <text x="112" y="236" text-anchor="middle" fill="#8ea8a1" font-size="6.5" font-family="monospace">s(t) → P(t)</text>
+            <!-- Monitor stand -->
+            <path d="M112 252v68M94 320h36" stroke="#6d8780" stroke-width="5" stroke-linecap="round"/>
+
+            <!-- Glowing condition wire flowing from Upstream Proxy -> Render-Bot -> Main Renderer Screen -->
+            <path d="M166 196 C 185 196, 185 268, 215 268 C 258 268, 286 196, 330 196" stroke="#58dfb8" stroke-width="2" class="flow-wire" opacity=".8"/>
+
+            <!-- MAIN RIGHT STUDIO MONITOR: GENERATIVE VIDEO RENDERER -->
+            <path d="M448 292v28M414 322h68" stroke="#7c968f" stroke-width="7" stroke-linecap="round"/>
+            <rect x="332" y="96" width="232" height="196" rx="13" fill="#293b37" stroke="#799c92" stroke-width="2"/>
+            <rect x="340" y="104" width="216" height="180" rx="8" fill="#0f1b1d"/>
+            <circle cx="352" cy="112" r="2.2" fill="#e07c6e"/><circle cx="360" cy="112" r="2.2" fill="#e8bf74"/><circle cx="368" cy="112" r="2.2" fill="#68d6b2"/>
+            <text x="454" y="114.5" text-anchor="middle" fill="#9bc2b7" font-size="6.8" font-weight="700" letter-spacing="1.4">GENERATIVE RENDERER · 60 FPS</text>
+
+            <!-- Rendered Video Canvas (Wireframe -> Sunlit Photoreal Sweep!) -->
+            <g clip-path="url(#st-main-clip)">
+              <rect x="352" y="118" width="194" height="106" fill="url(#st-sky)"/>
+              <!-- Warm sun + sunlit hills + courtyard arch -->
+              <circle cx="512" cy="144" r="14" fill="#f7cb8b"/>
+              <circle cx="512" cy="144" r="22" fill="#f7cb8b" fill-opacity=".14"/>
+              <path d="M350 224 L402 158 L442 192 L486 154 L548 224 Z" fill="#4f7c73"/>
+              <path d="M350 224 L414 186 L466 206 L516 178 L548 224 Z" fill="#29524a"/>
+              <!-- Courtyard pillars & red/blue fighter silhouettes -->
+              <rect x="366" y="176" width="8" height="46" fill="#d9c6a3"/>
+              <rect x="384" y="176" width="8" height="46" fill="#d9c6a3"/>
+              <path d="M362 176h34l-4-8h-26Z" fill="#e8d9bc"/>
+              <circle cx="446" cy="198" r="4" fill="#e06756"/><path d="M446 202v12m0-8-6 4m6-4 7 3" stroke="#e06756" stroke-width="2.4" stroke-linecap="round"/>
+              <circle cx="472" cy="195" r="4" fill="#63b5e8"/><path d="M472 199v14m0-9-6 3m6-3 6 4" stroke="#63b5e8" stroke-width="2.4" stroke-linecap="round"/>
+              <!-- Subtle wireframe mesh overlay -->
+              <path d="M352 172h194M416 118v106M482 118v106" stroke="#a6f2db" stroke-opacity=".16" stroke-dasharray="3 4"/>
+              <!-- Animated Emerald Render Sweep Beam -->
+              <g class="scan-beam">
+                <rect x="330" y="118" width="44" height="106" fill="url(#st-beam)"/>
+                <line x1="374" y1="118" x2="374" y2="224" stroke="#8ff5d6" stroke-width="1.8"/>
+              </g>
+            </g>
+            <rect x="352" y="118" width="194" height="106" rx="6" stroke="#6f948a" stroke-opacity=".4"/>
+
+            <!-- Live Multi-Track Conditioning Timeline -->
+            <rect x="344" y="236" width="208" height="44" rx="5" fill="#0a1315"/>
+            <g clip-path="url(#st-tl-clip)">
+              <rect x="348" y="241" width="66" height="8" rx="2" fill="#785c84"/>
+              <rect x="418" y="241" width="128" height="8" rx="2" fill="#9979a8"/>
+              <rect x="348" y="253" width="96" height="8" rx="2" fill="#2b846f"/>
+              <rect x="448" y="253" width="98" height="8" rx="2" fill="#46a38d"/>
+              <rect x="348" y="265" width="198" height="7" rx="2" fill="#ad803b"/>
+              <g class="playhead">
+                <line x1="350" y1="236" x2="350" y2="280" stroke="#9cf7dc" stroke-width="1.3"/>
+                <polygon points="346,236 354,236 350,242" fill="#9cf7dc"/>
+              </g>
+            </g>
+
+            <!-- STUDIO DESK -->
+            <rect x="46" y="320" width="548" height="14" rx="5" fill="#324742" stroke="#5c7b73" stroke-width="1.5"/>
+            <path d="M84 334v52M556 334v52" stroke="#293b37" stroke-width="10" stroke-linecap="round"/>
+
+            <!-- FRIENDLY ANIMATED RENDER-BOT MASCOT AT THE DESK -->
+            <g>
+              <!-- Chair back -->
+              <rect x="172" y="254" width="18" height="62" rx="7" fill="#3d524c" stroke="#5b776f"/>
+              <!-- Robot torso -->
+              <path d="M188 260q0-20 22-21h14q22 1 24 22l2 44q-30 14-64 2Z" fill="url(#st-shell)" stroke="#1e4038" stroke-width="2"/>
+              <!-- Glowing Mint Prism Core on chest -->
+              <polygon points="219,256 231,269 219,282 207,269" fill="url(#st-teal)" stroke="#164036" stroke-width="1.6"/>
+              <polygon points="219,261 225,269 219,277 213,269" fill="#d9fff3" opacity=".8"/>
+              <!-- Tool belt (4 tier colored modules: T0 teal, T1 gold, T2 coral, T3 plum!) -->
+              <path d="M186 294q32 8 66 0v18q-34 8-66-1Z" fill="#2c4a43" stroke="#16332c" stroke-width="1.6"/>
+              <rect x="192" y="298" width="11" height="11" rx="2.5" fill="#46a38d"/>
+              <rect x="207" y="299" width="11" height="11" rx="2.5" fill="#d9a552"/>
+              <rect x="222" y="299" width="11" height="11" rx="2.5" fill="#cc6b5c"/>
+              <rect x="237" y="298" width="11" height="11" rx="2.5" fill="#9a7aa8"/>
+              <!-- Animated arms typing on control console -->
+              <path class="bot-arm-l" d="M190 258 C 174 282, 186 306, 212 312" stroke="#dce9e4" stroke-width="13" stroke-linecap="round"/>
+              <path class="bot-arm-r" d="M245 258 C 266 280, 272 302, 294 312" stroke="#dce9e4" stroke-width="13" stroke-linecap="round"/>
+              <!-- Control keyboard on desk -->
+              <path d="M226 312h78l6 8h-90Z" fill="#20312e" stroke="#6f948a" stroke-width="1.2"/>
+              <path d="M236 316h12M252 316h16M272 316h22" stroke="#7ef0cf" stroke-width="1.8" stroke-linecap="round"/>
+
+              <!-- Robot head (nodding gently + blinking smiling mint eyes + golden spark antenna!) -->
+              <g class="bot-head">
+                <g class="bot-antenna">
+                  <path d="M217 154V132" stroke="#9cc0b6" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="217" cy="128" r="6.5" fill="#e6b25c" stroke="#fff4d9" stroke-width="1.5"/>
+                  <circle class="spark-float" cx="217" cy="128" r="11" stroke="#f5d08a" stroke-width="1" stroke-dasharray="2 3"/>
+                </g>
+                <!-- Round teal headphones/ears -->
+                <circle cx="176" cy="195" r="13" fill="url(#st-teal)" stroke="#173830" stroke-width="2"/>
+                <circle cx="258" cy="195" r="13" fill="url(#st-teal)" stroke="#173830" stroke-width="2"/>
+                <!-- Head shell -->
+                <rect x="178" y="154" width="78" height="74" rx="26" fill="url(#st-shell)" stroke="#1d3d35" stroke-width="2"/>
+                <!-- Dark visor -->
+                <rect x="188" y="168" width="58" height="46" rx="16" fill="url(#st-visor)" stroke="#2c5950" stroke-width="1.4"/>
+                <!-- Blinking happy mint eyes -->
+                <path class="bot-eye" d="M201 190 Q207 183 213 190" stroke="#7bf4d3" stroke-width="3.6" stroke-linecap="round"/>
+                <path class="bot-eye" d="M225 190 Q231 183 237 190" stroke="#7bf4d3" stroke-width="3.6" stroke-linecap="round"/>
+                <!-- Tiny glowing smile -->
+                <path d="M213 201 Q219 206 225 201" stroke="#5ad6b6" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </g>
+          </svg>
+
+          <figcaption class="studio-cap">
+            <span><b>Render-Bot Studio:</b> Upstream 3D proxy <code>s(t) → P(t)</code> rendered live into video.</span>
+            <span>T0–T3b · 336 Works</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- AUTHORS & 15 OFFICIAL UNIVERSITY CALLIGRAPHY LOCKUPS -->
+    <section class="cover-people" aria-label="Authors and institutions">
+      <div class="wrap">
+        <ul class="authors">
           <li>Xinye Li<sup>1</sup><span class="r-star">★</span><span class="r-lead">✦</span></li>
           <li>Liuzhou Zhang<sup>2</sup><span class="r-star">★</span></li>
           <li>Te Sun<sup>3</sup><span class="r-star">★</span></li>
@@ -77,7 +303,7 @@
           <li>Wai Lam<sup>1</sup><span class="r-sen">◆</span></li>
         </ul>
 
-        <div class="aff-line">
+        <div class="aff-index">
           <span><sup>1</sup>CUHK</span><span><sup>2</sup>HKUST(GZ)</span><span><sup>3</sup>SJTU</span>
           <span><sup>4</sup>CASIA</span><span><sup>5</sup>FDU</span><span><sup>6</sup>NUS</span>
           <span><sup>7</sup>USTC</span><span><sup>8</sup>CityUHK</span><span><sup>9</sup>PolyU</span>
@@ -92,7 +318,7 @@
           <span><b>Contact:</b> <a href="mailto:xyli@se.cuhk.edu.hk" style="color:var(--teal);text-decoration:underline;">xyli@se.cuhk.edu.hk</a></span>
         </div>
 
-        <div class="lockup-wall" aria-label="Participating Institutions">
+        <div class="lockup-wall" aria-label="Participating institutions">
           <img class="wide" src="assets/lockups/cuhk.png" alt="CUHK" />
           <img class="tall" src="assets/lockups/hkustgz.png" alt="HKUST(GZ)" />
           <img src="assets/lockups/sjtu.png" alt="SJTU" />
@@ -110,211 +336,192 @@
           <img class="tall" src="assets/lockups/pku.png" alt="Peking University" />
         </div>
 
-        <p class="hero-thesis">
-          Frontier video generation is shifting from open-ended content invention toward <b>faithful conditional rendering</b>: layout, identity, physical mechanics, and interactive state move upstream, while the video model preserves what is specified and synthesizes the visual detail left open.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="#workbench">Try Interactive Ladder ↓</a>
-          <a class="btn" href="#roadmap">Interactive Roadmap</a>
-          <a class="btn" href="#matrix">System Matrix (68)</a>
-          <a class="btn" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers" target="_blank" rel="noopener">Awesome GitHub ↗</a>
-          <a class="btn" href="references.bib" download>Download .bib (336)</a>
-        </div>
-
-        <div class="kpi-strip">
-          <div class="kpi"><strong id="stat-cited">336</strong><span>Cited Works</span></div>
-          <div class="kpi"><strong id="stat-systems">68</strong><span>Compared Systems</span></div>
-          <div class="kpi"><strong id="stat-t3">50</strong><span>Tier-3 Renderers</span></div>
-          <div class="kpi"><strong id="stat-bench">29</strong><span>Benchmarks</span></div>
+        <div class="stats-row">
+          <div><strong id="stat-cited">336</strong><span>Cited Works</span></div>
+          <div><strong id="stat-systems">68</strong><span>Compared Systems</span></div>
+          <div><strong id="stat-t3">50</strong><span>Tier-3 Renderers</span></div>
+          <div><strong id="stat-bench">29</strong><span>Benchmarks</span></div>
         </div>
       </div>
     </section>
 
-    <!-- MODULE 1: Native Interactive Specification Ladder Workbench -->
-    <section class="sec" id="workbench">
+    <!-- PERSPECTIVE: SPECIFICATION LADDER WITH BESPOKE SVG GLYPHS -->
+    <section class="sec alt" id="perspective">
       <div class="wrap">
         <div class="sec-head">
           <div>
-            <div class="sec-tag">Interactive Framework · Ch. 2</div>
-            <h2>The Specification Ladder Workbench</h2>
+            <div class="eyebrow"><span class="status-dot"></span> Perspective · Ch. 2</div>
+            <h2>The Specification Ladder</h2>
           </div>
-          <p>Step through Tiers 0 to 3b to watch how upstream inputs, the 2×4 factor precision contract, visual memory, and failure modes transform in real time.</p>
+          <p>Click any tier card below to inspect its 2×4 factor precision contract (Appearance <i>A</i> vs. Structure <i>S</i>) and the exact failure mode traded into on our courtyard duel scenario.</p>
         </div>
 
-        <div class="workbench">
-          <div class="wb-tabs">
-            <div class="tier-switcher" id="tier-switcher">
-              <button type="button" class="tier-tab" data-tier="T0" style="--tab-c:#1d5347;"><span class="t-dot"></span>T0 · Text</button>
-              <button type="button" class="tier-tab" data-tier="T1" style="--tab-c:#ad7e34;"><span class="t-dot"></span>T1 · Subject Ref</button>
-              <button type="button" class="tier-tab" data-tier="T2" style="--tab-c:#a94f42;"><span class="t-dot"></span>T2 · Composed</button>
-              <button type="button" class="tier-tab active" data-tier="T3a" style="--tab-c:#765885;"><span class="t-dot"></span>T3a · Pre-Fixed Structure</button>
-              <button type="button" class="tier-tab" data-tier="T3b" style="--tab-c:#3f668c;"><span class="t-dot"></span>T3b · Causal Stream</button>
+        <div class="paths" id="ladder-paths">
+          <!-- T0 -->
+          <button type="button" class="path t0" data-tier="T0">
+            <div class="path-top"><span>Tier 0</span><span>Described</span></div>
+            <div class="path-glyph" aria-hidden="true">
+              <svg viewBox="0 0 90 50" fill="none"><rect x="2" y="6" width="60" height="36" rx="6" fill="#fff" stroke="#1e5246" stroke-width="1.8"/><path d="M12 17h38M12 25h30M12 33h20" stroke="#1e5246" stroke-width="2.2" stroke-linecap="round"/><path d="M74 12l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5Z" fill="#ad803b"/></svg>
             </div>
-            <div class="wb-controls">
-              <button type="button" class="mini-btn" id="wb-autoplay">▶ Auto-Step</button>
+            <h3>Text Specification</h3>
+            <p>Dense captions and LLM rewriters describe the scene in words; the generator invents concrete faces, layout, and timing.</p>
+            <div class="path-footer"><span>Generator interprets</span><span>Inspect →</span></div>
+          </button>
+
+          <!-- T1 -->
+          <button type="button" class="path t1" data-tier="T1">
+            <div class="path-top"><span>Tier 1</span><span>Exemplified</span></div>
+            <div class="path-glyph" aria-hidden="true">
+              <svg viewBox="0 0 90 50" fill="none"><rect x="4" y="8" width="38" height="34" rx="5" fill="#fff" stroke="#ad803b" stroke-width="1.8"/><circle cx="23" cy="20" r="6" fill="#f0d5a4" stroke="#ad803b" stroke-width="1.5"/><path d="M12 37c2-6 20-6 22 0" stroke="#ad803b" stroke-width="1.8" stroke-linecap="round"/><rect x="48" y="14" width="32" height="24" rx="4" fill="#fff" fill-opacity=".65" stroke="#ad803b" stroke-dasharray="3 3" stroke-width="1.4"/><circle cx="42" cy="11" r="4" fill="#ad803b"/></svg>
             </div>
-          </div>
+            <h3>Appearance Anchoring</h3>
+            <p>Subject reference portraits anchor identity and wardrobe while the video prior decides motion, camera, and layout.</p>
+            <div class="path-footer"><span>R2V lineage</span><span>Inspect →</span></div>
+          </button>
 
-          <div class="wb-body">
-            <!-- Left: Live Pipeline SVG + Description -->
-            <div class="wb-left">
-              <div class="wb-stage-head">
-                <h3 class="wb-tier-title" id="wb-title">Tier 3a — Pre-Fixed External Structure</h3>
-                <span class="wb-lineage-pill" id="wb-lineage">Geometry + Appearance Lineages Converge</span>
-              </div>
-              <p class="wb-desc" id="wb-desc"></p>
-
-              <div class="pipe-svg-wrap">
-                <svg class="pipe-svg" viewBox="0 0 640 220" role="img" aria-label="Dynamic generative rendering pipeline diagram">
-                  <defs>
-                    <marker id="arr-main" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d5347" />
-                    </marker>
-                    <marker id="arr-mem" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3f668c" />
-                    </marker>
-                  </defs>
-
-                  <!-- Node 1: Upstream Specifier -->
-                  <rect id="svg-box-up" x="14" y="34" width="160" height="92" rx="12" fill="#efe9f4" stroke="#765885" stroke-width="1.8" />
-                  <text x="94" y="56" text-anchor="middle" font-size="10" font-weight="700" fill="#765885" letter-spacing="0.8">UPSTREAM SPECIFIER</text>
-                  <text id="svg-up-main" x="94" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#13201d">Artist / Code / Engine</text>
-                  <text id="svg-up-sub" x="94" y="100" text-anchor="middle" font-size="10.5" fill="#5d6e69">Pre-fixed clip S(1:T)</text>
-
-                  <!-- Arrow 1 -> 2 -->
-                  <line x1="176" y1="80" x2="226" y2="80" stroke="#1d5347" stroke-width="2.2" class="flow-dash" marker-end="url(#arr-main)" />
-                  <text id="svg-edge-1" x="201" y="69" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1d5347">Aligned</text>
-
-                  <!-- Node 2: Generative Renderer -->
-                  <rect id="svg-box-ren" x="232" y="26" width="204" height="108" rx="14" fill="#ffffff" stroke="#1d5347" stroke-width="2" />
-                  <text x="334" y="48" text-anchor="middle" font-size="10" font-weight="700" fill="#1d5347" letter-spacing="0.8">VIDEO MODEL (RENDERER)</text>
-                  <text id="svg-ren-main" x="334" y="72" text-anchor="middle" font-size="13.5" font-weight="700" fill="#13201d">Conditional Synthesis</text>
-                  <text id="svg-ren-sub1" x="334" y="94" text-anchor="middle" font-size="10.5" fill="#2e403b">Preserves specified layout &amp; motion</text>
-                  <text id="svg-ren-sub2" x="334" y="112" text-anchor="middle" font-size="10.5" fill="#5d6e69">Invents lighting, cloth, textures</text>
-
-                  <!-- Arrow 2 -> 3 -->
-                  <line x1="438" y1="80" x2="486" y2="80" stroke="#1d5347" stroke-width="2.2" class="flow-dash" marker-end="url(#arr-main)" />
-
-                  <!-- Node 3: Rendered Video -->
-                  <rect x="492" y="34" width="134" height="92" rx="12" fill="#e6f3ee" stroke="#1d5347" stroke-width="1.8" />
-                  <text x="559" y="56" text-anchor="middle" font-size="10" font-weight="700" fill="#1d5347" letter-spacing="0.8">OUTPUT VIDEO</text>
-                  <text id="svg-out-main" x="559" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#13201d">Clip Y(1:T)</text>
-                  <text id="svg-out-sub" x="559" y="100" text-anchor="middle" font-size="10.5" fill="#5d6e69">Adheres to S(1:T)</text>
-
-                  <!-- Visual Memory / Live Action Feedback Loop (illuminates at T3b!) -->
-                  <g id="svg-mem-loop" class="mem-loop" opacity="0.22">
-                    <path d="M 559 128 L 559 182 L 334 182 L 334 139" fill="none" stroke="#3f668c" stroke-width="2" class="flow-dash" marker-end="url(#arr-mem)" />
-                    <rect x="372" y="167" width="148" height="28" rx="14" fill="#e7f0f8" stroke="#3f668c" stroke-width="1.2" />
-                    <text x="446" y="185" text-anchor="middle" font-size="10" font-weight="700" fill="#3f668c">Visual Memory m(k) · Appearance Only</text>
-
-                    <path d="M 94 182 L 94 131" fill="none" stroke="#ad7e34" stroke-width="2" class="flow-dash" marker-end="url(#arr-main)" />
-                    <rect x="24" y="167" width="144" height="28" rx="14" fill="#f7eedc" stroke="#ad7e34" stroke-width="1.2" />
-                    <text x="96" y="185" text-anchor="middle" font-size="10" font-weight="700" fill="#8b6120">Live Actions a(t) → s(t+1)</text>
-                  </g>
-                </svg>
-              </div>
+          <!-- T2 -->
+          <button type="button" class="path t2" data-tier="T2">
+            <div class="path-top"><span>Tier 2</span><span>Composed</span></div>
+            <div class="path-glyph" aria-hidden="true">
+              <svg viewBox="0 0 96 50" fill="none"><rect x="3" y="6" width="26" height="18" rx="3.5" fill="#fff" stroke="#a75246" stroke-width="1.6"/><circle cx="16" cy="15" r="4" fill="#e6b6ae"/><rect x="3" y="28" width="26" height="16" rx="3.5" fill="#fff" stroke="#a75246" stroke-width="1.6"/><path d="M8 36h3l2-5 3 9 2-4h6" stroke="#a75246" stroke-width="1.6" stroke-linecap="round"/><path d="M32 16l18 9M32 36l18-9" stroke="#a75246" stroke-width="1.6"/><rect x="52" y="10" width="36" height="30" rx="5" fill="#a75246" fill-opacity=".14" stroke="#a75246" stroke-width="1.8"/><path d="M62 25h16M70 17v16" stroke="#a75246" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
+            <h3>Compositional Spec</h3>
+            <p>Multi-modal bundles of images, driving clips, audio, timed text, or extracted pose/depth routed across factors by the model.</p>
+            <div class="path-footer"><span>18 T1–2 systems</span><span>Inspect →</span></div>
+          </button>
 
-            <!-- Right: Live 2x4 Factor Matrix + Courtyard Duel Diagnostic -->
-            <div class="wb-right">
-              <div class="factor-card">
-                <div class="factor-card-head">
-                  <h4>2×4 Factor Precision Contract</h4>
-                  <div class="prec-legend">
-                    <span><i class="p-sw open"></i>Open</span>
-                    <span><i class="p-sw described"></i>Described</span>
-                    <span><i class="p-sw exemplified"></i>Exemplified</span>
-                    <span><i class="p-sw aligned"></i>Aligned</span>
-                  </div>
-                </div>
-                <div class="factor-row" id="row-appearance"></div>
-                <div class="factor-row" id="row-structure"></div>
-              </div>
-
-              <div class="duel-box">
-                <p class="duel-title">Running Example · Two Fighters in a Courtyard (0:04 Knockdown)</p>
-                <div class="duel-grid">
-                  <div class="duel-row"><b>Upstream input:</b> <span id="duel-up"></span></div>
-                  <div class="duel-row"><b>Synthesized by renderer:</b> <span id="duel-syn"></span></div>
-                  <div class="duel-fail"><b>Characteristic failure traded into:</b> <span id="duel-fail"></span></div>
-                </div>
-                <div class="duel-meta">
-                  <span id="duel-auth"></span>
-                  <a href="#library" class="wb-filter-link" id="wb-jump-lib">Filter papers in this tier →</a>
-                </div>
-              </div>
+          <!-- T3a -->
+          <button type="button" class="path t3a active" data-tier="T3a">
+            <div class="path-top"><span>Tier 3a</span><span>Pre-Fixed</span></div>
+            <div class="path-glyph" aria-hidden="true">
+              <svg viewBox="0 0 96 50" fill="none"><polygon points="30,6 52,17 52,37 30,46 8,37 8,17" fill="#785c84" fill-opacity=".18" stroke="#785c84" stroke-width="1.8"/><path d="M30 6v40M8 17l22 11 22-11" stroke="#785c84" stroke-width="1.5"/><path d="M58 25h12" stroke="#785c84" stroke-width="1.8" stroke-dasharray="3 2"/><rect x="72" y="12" width="20" height="26" rx="4" fill="#785c84"/><path d="M78 21l7 4-7 4Z" fill="#fff"/></svg>
             </div>
-          </div>
+            <h3>Pre-Fixed Structure</h3>
+            <p>Editable frame-aligned structure (clay, G-buffers, Blender/Three.js code, simulator passes) finalized before sampling.</p>
+            <div class="path-footer"><span>26 T3a systems</span><span>Inspect →</span></div>
+          </button>
+
+          <!-- T3b -->
+          <button type="button" class="path t3b" data-tier="T3b">
+            <div class="path-top"><span>Tier 3b</span><span>Causal Stream</span></div>
+            <div class="path-glyph" aria-hidden="true">
+              <svg viewBox="0 0 96 50" fill="none"><rect x="4" y="10" width="26" height="22" rx="5" fill="#4e6e91" fill-opacity=".18" stroke="#4e6e91" stroke-width="1.8"/><text x="17" y="24" text-anchor="middle" fill="#4e6e91" font-size="9" font-weight="700" font-family="monospace">s(t)</text><path d="M33 21h22" stroke="#4e6e91" stroke-width="2" class="flow-wire"/><rect x="58" y="8" width="32" height="26" rx="5" fill="#4e6e91"/><path d="M68 16l10 5-10 5Z" fill="#fff"/><path d="M74 36v7H17v-8" stroke="#1e5246" stroke-width="1.6" stroke-dasharray="3 3" fill="none"/></svg>
+            </div>
+            <h3>Evolving-State Stream</h3>
+            <p>Live structural chunks stream causally from an interactive engine or harness while visual memory stays subordinate to state.</p>
+            <div class="path-footer"><span>24 T3b systems</span><span>Inspect →</span></div>
+          </button>
         </div>
 
-        <details class="paper-fig-details">
-          <summary>Optional · View full printed paper schematics (Figure 1 Teaser &amp; Figure 4 Ladder)</summary>
-          <img src="assets/teaser.png" alt="Figure 1 Teaser" onclick="openLightbox(this.src)" />
-        </details>
+        <!-- Live synchronized 2x4 Factor Matrix + Courtyard Duel Diagnostic -->
+        <div class="ladder-live-bar" id="ladder-live-bar">
+          <div>
+            <div class="factor-row" id="row-appearance"></div>
+            <div class="factor-row" id="row-structure"></div>
+          </div>
+          <div class="duel-panel">
+            <div class="duel-kicker" id="duel-kicker">Tier 3a · Two Fighters in a Courtyard (0:04 Knockdown)</div>
+            <div><b>Upstream:</b> <span id="duel-up"></span> · <b>Renderer adds:</b> <span id="duel-syn"></span></div>
+            <div class="duel-warn"><b>Failure traded into:</b> <span id="duel-fail"></span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- MODULE 2: T3a/T3b vs Real-Time Orthogonality Explorer -->
+    <!-- ================================================================
+         INTERACTIVE 4-LINE METRO EVOLUTION MAP (ORIGINAL PAPER FIG 2!)
+         ================================================================ -->
+    <section class="sec" id="metro-roadmap">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="eyebrow"><span class="status-dot"></span> Evolution Roadmap · Figure 2</div>
+            <h2>Four Converging Lineages &amp; Late-2026 Tier-3 Surge</h2>
+          </div>
+          <p>Interactive web edition of the survey's 4-line metro evolution map (2016–Nov 2026): 57 chronological stations with institution emblems converging into 36 late-2026 terminal systems, plus the monthly injection-pathway surge chart.</p>
+        </div>
+
+        <div class="metro-shell">
+          <div class="metro-toolbar">
+            <div class="line-pills" id="metro-line-pills">
+              <button type="button" class="line-pill active" data-mline="all" style="--lc:#1e5246;"><i></i>All 4 Lineages</button>
+              <button type="button" class="line-pill" data-mline="llm" style="--lc:#1e5246;"><i></i>LLM Scene Authoring</button>
+              <button type="button" class="line-pill" data-mline="r2v" style="--lc:#ad803b;"><i></i>Subject &amp; Multi-Ref R2V</button>
+              <button type="button" class="line-pill" data-mline="geo" style="--lc:#785c84;"><i></i>Graphics &amp; Buffer Synthesis</button>
+              <button type="button" class="line-pill" data-mline="wm" style="--lc:#4e6e91;"><i></i>Action WMs &amp; Distillation</button>
+            </div>
+            <span style="font-size:11.5px;color:var(--muted);">Click any station or terminal chip to open paper ↗</span>
+          </div>
+
+          <!-- Panel (a): 4 Subway Tracks + Late-2026 Terminal -->
+          <div class="metro-main">
+            <div class="metro-tracks-col">
+              <div class="era-header">
+                <div class="era-band">I · 2016–22</div>
+                <div class="era-band e2">II · 2023–25 · Controllable Priors &amp; R2V</div>
+                <div class="era-band e3">IIIa · Jan–Jul 2026</div>
+              </div>
+              <div id="metro-tracks"></div>
+            </div>
+
+            <div class="metro-terminal-col">
+              <div class="term-head">IIIb · Aug–Mid-Nov 2026 Tier-3 Terminal</div>
+              <div id="metro-terminal"></div>
+            </div>
+          </div>
+
+          <!-- Panel (b): Monthly Surge Chart (all 50 Tier-3 systems) -->
+          <div class="surge-panel">
+            <div class="surge-meta">
+              <h4>b. Monthly Volume &amp; Injection Pathways (All 50 Tier-3 Systems)</h4>
+              <span class="surge-pill">32 since mid-Aug '26 · 18 in October alone</span>
+              <div class="pw-legend" id="pw-legend"></div>
+            </div>
+            <div class="surge-chart" id="surge-chart" aria-label="Monthly Tier-3 release bar chart"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAUSALITY vs REAL-TIME ORTHOGONALITY QUADRANT -->
     <section class="sec alt" id="orthogonality">
       <div class="wrap">
         <div class="sec-head">
           <div>
-            <div class="sec-tag">Conceptual Boundary · Sec. 2.3 &amp; Ch. 7</div>
-            <h2>Causality (T3a vs. T3b) Is Orthogonal to Real-Time Speed</h2>
+            <div class="eyebrow"><span class="status-dot"></span> Key Distinction · Sec. 2.3 &amp; Ch. 7</div>
+            <h2>T3a vs. T3b Causality Is Orthogonal to Real-Time Speed</h2>
           </div>
-          <p>Are there real-time / fast T3a renderers? Yes — inference speed is a deployment optimization (distillation, serving), whereas T3a vs. T3b is defined strictly by whether upstream structure is pre-fixed or causally updated mid-generation.</p>
+          <p>Fast few-step rendering of a pre-fixed clip stays <b>T3a</b> (e.g., distilled 8-step CoCode-World or SolarRenderer's primary clip release + 28 FPS causal variant); slow causal/stateful updates (~1 FPS FrameDiffuser) stay <b>T3b</b>.</p>
         </div>
 
         <div class="ortho-shell">
-          <div class="ortho-axis-bar">
-            <span>Spec Causality ↓</span>
+          <div class="ortho-axis">
+            <span>Causality ↓</span>
             <span>← Sub-Real-Time / Multi-Step Diffusion</span>
             <span>Real-Time / Fast Distilled Variants →</span>
           </div>
-
           <div class="quad-grid">
-            <!-- Row 1: T3a -->
-            <div class="y-label t3a">
-              <span>Tier 3a</span>
-              <small>Pre-fixed clip S(1:T)<br />before sampling</small>
-            </div>
+            <div class="y-lbl t3a"><span>Tier 3a</span><small>Pre-fixed clip S(1:T)<br/>before sampling</small></div>
             <div class="quad-cell">
-              <div class="quad-head">
-                <h4>T3a · Clip-Level Quality Renderers</h4>
-                <span class="quad-count" id="q-t3a-slow-cnt">23 systems</span>
-              </div>
-              <p class="quad-desc">Full-sequence bidirectional attention (20–50 steps) over pre-authored clay, G-buffers, or Blender/Three.js drafts.</p>
+              <div class="quad-head"><h4>T3a · Clip-Level Quality Renderers</h4><span class="quad-cnt" id="q-t3a-slow-cnt"></span></div>
+              <p class="quad-desc">Full-sequence bidirectional denoising (20–50 steps) over pre-authored clay, G-buffers, or code drafts.</p>
               <div class="chip-cloud" id="q-t3a-slow"></div>
             </div>
-            <div class="quad-cell highlight-var">
-              <div class="quad-head">
-                <h4>T3a · Fast Distilled / Streaming Variants</h4>
-                <span class="quad-count" id="q-t3a-fast-cnt">3 systems</span>
-              </div>
-              <p class="quad-desc">Fast few-step clip rendering (e.g., 8-step distillation) remains <b>T3a</b> when structure is fixed up front; systems below ship a primary T3a clip model plus a secondary fast/causal variant.</p>
+            <div class="quad-cell var">
+              <div class="quad-head"><h4>T3a · Fast Distilled / Streaming Variants</h4><span class="quad-cnt" id="q-t3a-fast-cnt"></span></div>
+              <p class="quad-desc">Fast few-step T3a clip models (CoCode-World 8-step) plus T3a systems shipping secondary T3b causal/streaming variants.</p>
               <div class="chip-cloud" id="q-t3a-fast"></div>
             </div>
 
-            <!-- Row 2: T3b -->
-            <div class="y-label t3b">
-              <span>Tier 3b</span>
-              <small>Causal stream from<br />evolving state s(t)</small>
-            </div>
+            <div class="y-lbl t3b"><span>Tier 3b</span><small>Causal stream from<br/>evolving state s(t)</small></div>
             <div class="quad-cell">
-              <div class="quad-head">
-                <h4>T3b · Sub-Real-Time Causal &amp; Stateful Turns</h4>
-                <span class="quad-count" id="q-t3b-slow-cnt">10 systems</span>
-              </div>
-              <p class="quad-desc">Strictly causal or multi-turn stateful execution (cannot peek at future states), even when throughput is ~1 FPS or several seconds per chunk.</p>
+              <div class="quad-head"><h4>T3b · Sub-Real-Time Causal &amp; Multi-Turn</h4><span class="quad-cnt" id="q-t3b-slow-cnt"></span></div>
+              <p class="quad-desc">Strictly causal or multi-turn stateful execution that cannot peek ahead, even at ~1 FPS or several seconds per turn.</p>
               <div class="chip-cloud" id="q-t3b-slow"></div>
             </div>
-            <div class="quad-cell highlight-rt">
-              <div class="quad-head">
-                <h4>T3b · Real-Time Interactive Renderers</h4>
-                <span class="quad-count" id="q-t3b-fast-cnt">14 systems</span>
-              </div>
-              <p class="quad-desc">Few-step distilled causal chunk/frame renderers driven live by game engines, physics simulators, or agent harnesses at interactive frame rates (13–83 FPS).</p>
+            <div class="quad-cell rt">
+              <div class="quad-head"><h4>T3b · Real-Time Interactive Renderers</h4><span class="quad-cnt" id="q-t3b-fast-cnt"></span></div>
+              <p class="quad-desc">Few-step distilled causal chunk/frame renderers driven live by engines and simulators at 13–83 FPS.</p>
               <div class="chip-cloud" id="q-t3b-fast"></div>
             </div>
           </div>
@@ -322,126 +529,15 @@
       </div>
     </section>
 
-    <!-- MODULE 3: Native Interactive Survey Roadmap -->
-    <section class="sec" id="roadmap">
+    <!-- SYSTEM COMPARISON MATRIX (68 SYSTEMS) -->
+    <section class="sec" id="matrix">
       <div class="wrap">
         <div class="sec-head">
           <div>
-            <div class="sec-tag">Interactive Reading Map · Sec. 1.7</div>
-            <h2>Survey Roadmap (Chapters 2–11)</h2>
+            <div class="eyebrow"><span class="status-dot"></span> Master Table · 68 Systems</div>
+            <h2>System Comparison Matrix</h2>
           </div>
-          <p>Click any chapter node to inspect its central research question, technical bottleneck, and representative literature across the generative rendering pipeline.</p>
-        </div>
-
-        <div class="roadmap-shell">
-          <div class="roadmap-stage">
-            <!-- Lane 1: Foundations & Drivers -->
-            <div class="rm-lane">
-              <div class="rm-lane-title"><span>Phase I · Conceptual Foundations &amp; Applications</span><span>Ch. 2 → Ch. 3</span></div>
-              <div class="rm-nodes">
-                <button type="button" class="rm-node active" data-ch="2" style="--node-c:#1d5347;">
-                  <span class="rm-num">CH. 02</span>
-                  <strong>Framework</strong>
-                  <small>Factors, ladder, contract</small>
-                </button>
-                <span class="rm-arrow">→</span>
-                <button type="button" class="rm-node" data-ch="3" style="--node-c:#3b7568;">
-                  <span class="rm-num">CH. 03</span>
-                  <strong>Driving Domains</strong>
-                  <small>Film, games, embodied sim</small>
-                </button>
-              </div>
-            </div>
-
-            <div class="rm-connector">↓ Tier-3 specification enters the renderer pipeline ↓</div>
-
-            <!-- Lane 2: Tier-3 Renderer Pipeline (Ch. 4 -> 8) -->
-            <div class="rm-lane pipe">
-              <div class="rm-lane-title"><span>Phase II · Tier-3 Renderer Core Pipeline</span><span>Ch. 4 → Ch. 5 → Ch. 6 → Ch. 7 → Ch. 8</span></div>
-              <div class="rm-nodes">
-                <button type="button" class="rm-node" data-ch="4" style="--node-c:#765885;">
-                  <span class="rm-num">CH. 04</span>
-                  <strong>Interfaces</strong>
-                  <small>Source, format, pathway</small>
-                </button>
-                <span class="rm-arrow">→</span>
-                <button type="button" class="rm-node" data-ch="5" style="--node-c:#3f668c;">
-                  <span class="rm-num">CH. 05</span>
-                  <strong>Interpretation</strong>
-                  <small>Binding &amp; selective reading</small>
-                </button>
-                <span class="rm-arrow">→</span>
-                <button type="button" class="rm-node" data-ch="6" style="--node-c:#6b527a;">
-                  <span class="rm-num">CH. 06</span>
-                  <strong>Training</strong>
-                  <small>Paired data &amp; distillation</small>
-                </button>
-                <span class="rm-arrow">→</span>
-                <button type="button" class="rm-node" data-ch="7" style="--node-c:#ad7e34;">
-                  <span class="rm-num">CH. 07</span>
-                  <strong>Streaming</strong>
-                  <small>Tier-3b runtime &amp; KV</small>
-                </button>
-                <span class="rm-arrow">→</span>
-                <button type="button" class="rm-node" data-ch="8" style="--node-c:#a94f42;">
-                  <span class="rm-num">CH. 08</span>
-                  <strong>Evaluation</strong>
-                  <small>Adherence benchmarks</small>
-                </button>
-              </div>
-            </div>
-
-            <div class="rm-connector">↓ Paradigm test &amp; forward outlook ↓</div>
-
-            <!-- Lane 3: Competing Paths & Outlook -->
-            <div class="rm-lane">
-              <div class="rm-lane-title"><span>Phase III · Competing Paradigms &amp; Future Directions</span><span>Ch. 9 → Ch. 10–11</span></div>
-              <div class="rm-nodes">
-                <button type="button" class="rm-node" data-ch="9" style="--node-c:#3f668c;">
-                  <span class="rm-num">CH. 09</span>
-                  <strong>Competing Paths</strong>
-                  <small>Implicit WMs &amp; code-only</small>
-                </button>
-                <span class="rm-arrow">→</span>
-                <button type="button" class="rm-node" data-ch="10" style="--node-c:#13201d;">
-                  <span class="rm-num">CH. 10–11</span>
-                  <strong>Open Problems &amp; Outlook</strong>
-                  <small>6 open directions &amp; tests</small>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dynamic Chapter Inspector -->
-          <aside class="roadmap-inspector" id="roadmap-inspector">
-            <span class="ri-badge" id="ri-badge">CH. 02 · FRAMEWORK</span>
-            <h3 id="ri-title">Definition and Framework</h3>
-            <p class="ri-q" id="ri-desc"></p>
-            <div class="ri-box">
-              <b>Core Technical Bottleneck</b>
-              <span id="ri-bottle"></span>
-            </div>
-            <div class="ri-box">
-              <b>Key Concepts &amp; Systems</b>
-              <span id="ri-keys"></span>
-            </div>
-            <div class="ri-actions">
-              <button type="button" class="btn primary" id="ri-filter-btn">Filter Library for This Chapter →</button>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- MODULE 4: System Comparison Matrix (68 Systems) -->
-    <section class="sec alt" id="matrix">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <div class="sec-tag">Appendix Master Table · Verified Schema</div>
-            <h2>System Comparison Matrix (68 Systems)</h2>
-          </div>
-          <p>Full live comparison of 26 T3a pre-fixed renderers, 24 T3b streamed/stateful renderers, and 18 T1–T2 reference-conditioned systems — with clean formatting and explicit RT speed badges.</p>
+          <p>Synchronized directly from Appendix Table 23 (24 T3b + 26 T3a + 18 T1–2), cleanly formatted with speed badges and zero LaTeX leaks.</p>
         </div>
 
         <div class="toolbar">
@@ -459,13 +555,7 @@
           <table class="matrix-table">
             <thead>
               <tr>
-                <th>System</th>
-                <th>Settled Upstream</th>
-                <th>Renderer Inputs</th>
-                <th>State Owner</th>
-                <th>Injection</th>
-                <th>Training Data</th>
-                <th>RT / Speed</th>
+                <th>System</th><th>Settled Upstream</th><th>Renderer Inputs</th><th>State Owner</th><th>Injection</th><th>Training Data</th><th>RT / Speed</th>
               </tr>
             </thead>
             <tbody id="matrix-tbody"></tbody>
@@ -474,15 +564,15 @@
       </div>
     </section>
 
-    <!-- MODULE 5: Searchable Paper & Benchmark Library (336 works) -->
-    <section class="sec" id="library">
+    <!-- SEARCHABLE RESEARCH LIBRARY (336 CITED WORKS) -->
+    <section class="sec alt" id="library">
       <div class="wrap">
         <div class="sec-head">
           <div>
-            <div class="sec-tag">Verified Bibliography · 336 Works</div>
+            <div class="eyebrow"><span class="status-dot"></span> Verified Bibliography · 336 Works</div>
             <h2>Searchable Research Library</h2>
           </div>
-          <p>Every cited paper in the survey, filterable by research track, publication year, and real-time capability, with one-click BibTeX copy.</p>
+          <p>Every cited work in the survey, filterable by research track, year, and real-time capability, with one-click BibTeX copy.</p>
         </div>
 
         <div class="lib-grid">
@@ -493,13 +583,9 @@
             <label class="flbl" for="year-filter">Publication Year</label>
             <select id="year-filter"><option value="all">All years</option></select>
 
-            <label class="chk">
-              <input type="checkbox" id="rt-only" />
-              <span>Real-time systems only</span>
-            </label>
-
+            <label class="chk"><input type="checkbox" id="rt-only" /><span>Real-time systems only</span></label>
             <button type="button" class="reset-lnk" id="reset-filters">Reset all filters</button>
-            <a class="bib-dl" href="references.bib" download>↓ Download full references.bib (336)</a>
+            <a class="bib-dl" href="references.bib" download>↓ Download references.bib (336)</a>
           </aside>
 
           <div>
@@ -513,26 +599,26 @@
             </div>
             <div class="lib-meta">
               <span id="results-count">Loading...</span>
-              <span>One-click BibTeX on every entry</span>
+              <span>Click Copy BibTeX on any entry</span>
             </div>
             <div id="paper-list"></div>
-            <div style="text-align:center;margin-top:22px;">
-              <button type="button" class="btn" id="load-more" style="display:none;">Show more</button>
+            <div style="text-align:center;margin-top:20px;">
+              <button type="button" class="resource-link" id="load-more" style="display:none;">Show more</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Cite & Contribute -->
-    <section class="sec alt" id="cite">
+    <!-- CITE & CONTRIBUTE -->
+    <section class="sec" id="cite">
       <div class="wrap">
         <div class="sec-head">
           <div>
-            <div class="sec-tag">Citation &amp; Community</div>
+            <div class="eyebrow"><span class="status-dot"></span> Citation &amp; Community</div>
             <h2>Cite or Contribute</h2>
           </div>
-          <p>Contributions of new Tier-3 generative renderers, streaming stacks, and adherence benchmarks are warmly welcomed via Pull Request.</p>
+          <p>Help keep this living catalog current as new Tier-3 renderers, streaming runtimes, and adherence benchmarks appear.</p>
         </div>
         <div class="cite-grid">
           <div class="bib-card">
@@ -545,11 +631,11 @@
 }</pre>
           </div>
           <div class="contrib-box">
-            <h3>Submit a Paper or Update</h3>
+            <h3>Submit a Paper or Correction</h3>
             <p>Open a Pull Request on <b>GenRender-Hub/Awesome-Generative-Renderers</b> with a verified arXiv link, tier placement, and BibTeX entry.</p>
             <div style="display:flex;gap:8px;flex-wrap:wrap;">
-              <a class="btn primary" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers/issues/new" target="_blank" rel="noopener">Open Issue / PR ↗</a>
-              <a class="btn" href="mailto:xyli@se.cuhk.edu.hk">Email Lead</a>
+              <a class="resource-link is-primary" href="https://github.com/GenRender-Hub/Awesome-Generative-Renderers/issues/new" target="_blank" rel="noopener">Open Issue / PR ↗</a>
+              <a class="resource-link" href="mailto:xyli@se.cuhk.edu.hk">Email Lead</a>
             </div>
           </div>
         </div>
@@ -567,10 +653,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="lb" id="lightbox" onclick="this.classList.remove('open')">
-    <img id="lb-img" src="" alt="Expanded figure" />
-  </div>
 
   <script src="app.js"></script>
 </body>
