@@ -114,127 +114,42 @@
     document.getElementById("duel-fail").textContent = d.fail;
   }
 
-  /* ---- Interactive 4-Line Metro Evolution Map (Figure 2!) ---- */
-  function renderMetro() {
-    const lineDefs = [
-      { id: "llm", title: "LLM Scene Authoring", color: "#1e5246", note: "Interchange at GPT4Motion → T3a code & T3b coding agents", dashed: false },
-      { id: "r2v", title: "Subject & Multi-Ref R2V", color: "#ad803b", note: "Interchange at VACE → Appearance slot & H3 ref. sequence", dashed: false },
-      { id: "geo", title: "Graphics & Buffer Synthesis", color: "#785c84", note: "pix2pix / vid2vid / ControlNet / DiffusionRenderer → T3a", dashed: false },
-      { id: "stream", title: "Streamed Branch (T3b Fork)", color: "#785c84", note: "Forks from Graphics line Dec 2025 → live engine streams", dashed: true, parent: "geo" },
-      { id: "wm", title: "Action World Models & Causal Distillation", color: "#4e6e91", note: "Supplies causal few-step distillation to T3b + implicit contrast", dashed: false },
-    ];
+  /* ---- 1:1 Native Interactive Figure 2 Metro Evolution Map ---- */
+  function wireExactMetro(svgText) {
+    const host = document.getElementById("metro-svg-host");
+    host.innerHTML = svgText;
+    const svg = host.querySelector("svg");
+    if (!svg) return;
 
-    const byLine = {};
-    for (const st of METRO.stations) (byLine[st.line] = byLine[st.line] || []).push(st);
-
-    document.getElementById("metro-tracks").innerHTML = lineDefs
-      .map((ld) => {
-        const list = (byLine[ld.id] || []).sort((a, b) => a.date.localeCompare(b.date));
-        const chips = list
-          .map((st) => {
-            const href = st.url ? `href="${esc(st.url)}" target="_blank" rel="noopener"` : `href="#library"`;
-            const tip = st.title ? `${st.title} (${st.date.slice(0, 7)})` : `${st.label} (${st.date.slice(0, 7)})`;
-            return `<a class="station-chip ${st.bold ? "bold" : ""}" ${href} title="${esc(tip)}">
-              <img src="assets/org_icons/${esc(st.logo)}.png" alt="" loading="lazy" />
-              <span>${esc(st.label)}</span>
-              <span class="st-yr">${esc(st.date.slice(2, 7))}</span>
-            </a>`;
-          })
-          .join("");
-        return `<div class="metro-line-row" data-mline="${esc(ld.parent || ld.id)}" style="--rail-c:${ld.color};">
-          <div class="ml-head">
-            <span class="ml-badge" style="background:${ld.color};">${esc(ld.title)}</span>
-            <span class="ml-note">${esc(ld.note)}</span>
-          </div>
-          <div class="station-rail ${ld.dashed ? "dashed" : ""}">${chips}</div>
-        </div>`;
-      })
-      .join("");
-
-    // Render Right Terminal (T3a 12 + T3b 18 + Implicit WMs 6)
-    const renderChipList = (arr) =>
-      arr
-        .map((c) => {
-          const pm = PATHWAY_META[c.pathway] || PATHWAY_META.mnr;
-          const href = c.url ? `href="${esc(c.url)}" target="_blank" rel="noopener"` : `href="#matrix"`;
-          return `<a class="t-chip ${c.bold ? "bold" : ""}" ${href} style="--pc:${pm.color};--pbg:${pm.bg};" title="${esc(c.title || c.label)}">
-            <img src="assets/org_icons/${esc(c.logo)}.png" alt="" loading="lazy" /><span>${esc(c.label)}</span>
-          </a>`;
-        })
-        .join("");
-
-    const T = METRO.terminal;
-    document.getElementById("metro-terminal").innerHTML = `
-      <div class="term-card">
-        <h4><span>T3a Clip Renderers · Pre-Fixed</span><span>12</span></h4>
-        <div class="term-sublbl">Executable code &amp; programmable proxies</div>
-        <div class="term-chips">${renderChipList(T.t3a_code)}</div>
-        <div class="term-sublbl">Engine buffers, 3D scaffolds &amp; simulators</div>
-        <div class="term-chips">${renderChipList(T.t3a_eng)}</div>
-      </div>
-      <div class="term-card">
-        <h4><span>T3b Stream &amp; Stateful Renderers</span><span>18</span></h4>
-        <div class="term-sublbl">Interactive game engines &amp; live streams</div>
-        <div class="term-chips">${renderChipList(T.t3b_eng)}</div>
-        <div class="term-sublbl">Coding agents &amp; executable rule harnesses</div>
-        <div class="term-chips">${renderChipList(T.t3b_agent)}</div>
-        <div class="term-sublbl">Persistent world state &amp; geometric streams</div>
-        <div class="term-chips">${renderChipList(T.t3b_world)}</div>
-      </div>
-      <div class="term-card implicit">
-        <h4><span>Contrasting: Implicit End-to-End WMs</span><span>6</span></h4>
-        <div class="term-chips">${renderChipList(T.implicit)}</div>
-      </div>
-    `;
-
-    // Render Panel (b): Monthly Surge Chart + Interactive Pathway Legend
-    const pwKeys = ["mfus", "mbr", "mh3", "mctx", "mxat", "mtf", "mnr"];
-    document.getElementById("pw-legend").innerHTML = pwKeys
-      .map((k) => {
-        const pm = PATHWAY_META[k];
-        return `<button type="button" class="pw-item" data-pw="${k}">
-          <span class="pw-sw" style="background:${pm.color};"></span><span>${esc(pm.label)}</span>
-        </button>`;
-      })
-      .join("");
-
-    document.getElementById("surge-chart").innerHTML = METRO.monthly
-      .map((b) => {
-        const isHot = b.items.length >= 12;
-        const blocks = [...b.items]
-          .reverse()
-          .map((pw) => `<div class="m-blk" data-pw="${pw}" style="background:${PATHWAY_META[pw].color};" title="${esc(PATHWAY_META[pw].label)}"></div>`)
-          .join("");
-        return `<div class="m-col">
-          <span class="m-cnt">${b.items.length}</span>
-          <div class="m-stack ${isHot ? "double" : ""}">${blocks}</div>
-          <span class="m-lbl ${isHot ? "hot" : ""}">${esc(b.m)}</span>
-        </div>`;
-      })
-      .join("");
-
-    // Interactive pathway highlight
-    document.querySelectorAll("#pw-legend .pw-item").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const pw = btn.dataset.pw;
-        activePathway = activePathway === pw ? null : pw;
-        document.querySelectorAll("#pw-legend .pw-item").forEach((b) => b.classList.toggle("active", b.dataset.pw === activePathway));
-        document.querySelectorAll("#surge-chart .m-blk").forEach((blk) => {
-          blk.classList.toggle("dim", Boolean(activePathway && blk.dataset.pw !== activePathway));
-        });
-      });
-    });
-
-    // Interactive lineage highlight
+    // Lineage filter pills highlight exact subway tracks & stations
     document.querySelectorAll("#metro-line-pills .line-pill").forEach((pill) => {
       pill.addEventListener("click", () => {
         document.querySelectorAll("#metro-line-pills .line-pill").forEach((p) => p.classList.remove("active"));
         pill.classList.add("active");
         const target = pill.dataset.mline;
-        document.querySelectorAll(".metro-line-row").forEach((row) => {
-          row.classList.toggle("dimmed", target !== "all" && row.dataset.mline !== target);
+        svg.querySelectorAll(".metro-track-grp").forEach((el) => {
+          el.classList.toggle("dimmed", target !== "all" && el.dataset.mline !== target);
         });
       });
+    });
+
+    // Panel (b) pathway legend interactively highlights matching terminal chips + monthly bars!
+    svg.querySelectorAll(".metro-pw-legend").forEach((leg) => {
+      leg.addEventListener("click", () => {
+        const pw = leg.dataset.pw;
+        activePathway = activePathway === pw ? null : pw;
+        svg.querySelectorAll(".metro-pw-legend").forEach((l) => l.classList.toggle("active", l.dataset.pw === activePathway));
+        svg.querySelectorAll(".metro-bar-blk").forEach((b) => b.classList.toggle("dimmed", Boolean(activePathway && b.dataset.pw !== activePathway)));
+        svg.querySelectorAll(".metro-tchip").forEach((c) => c.classList.toggle("dimmed", Boolean(activePathway && c.dataset.pw !== activePathway)));
+      });
+    });
+
+    // Zoom toggle
+    const scroller = document.getElementById("metro-svg-scroll");
+    const zoomBtn = document.getElementById("metro-zoom-btn");
+    zoomBtn.addEventListener("click", () => {
+      const z = scroller.classList.toggle("zoomed");
+      zoomBtn.textContent = z ? "🔍 Fit 100%" : "🔍 Zoom 145%";
     });
   }
 
@@ -458,9 +373,9 @@
       c.addEventListener("click", () => setActiveTier(c.dataset.tier));
     });
 
-    const [catRes, metroRes] = await Promise.all([fetch("data/catalog.json"), fetch("data/metro.json")]);
+    const [catRes, svgRes] = await Promise.all([fetch("data/catalog.json"), fetch("assets/metro_exact.svg")]);
     CATALOG = await catRes.json();
-    METRO = await metroRes.json();
+    const metroSvgText = await svgRes.text();
 
     const c = CATALOG.meta.counts;
     document.getElementById("stat-cited").textContent = c.cited_works;
@@ -468,7 +383,7 @@
     document.getElementById("stat-t3").textContent = c.tier3_total;
     document.getElementById("stat-bench").textContent = c.benchmarks;
 
-    renderMetro();
+    wireExactMetro(metroSvgText);
     renderQuadrants();
     populateYears();
     renderTrackFilters();

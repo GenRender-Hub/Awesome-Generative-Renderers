@@ -351,6 +351,15 @@ img { max-width: 100%; height: auto; }
   margin: 0 7px;
   color: var(--ink);
 }
+.authors li a {
+  color: var(--ink);
+  border-bottom: 1px dotted rgba(30, 82, 70, 0.42);
+  transition: color 0.14s, border-color 0.14s;
+}
+.authors li a:hover {
+  color: var(--teal);
+  border-bottom: 1.5px solid var(--teal);
+}
 .authors sup { font-family: var(--sans); font-size: 9.5px; color: var(--muted); margin-left: 1.5px; }
 .r-star { color: var(--teal); font-size: 10.5px; margin-left: 2px; }
 .r-lead { color: var(--gold); font-size: 10.5px; margin-left: 1px; }
@@ -536,11 +545,36 @@ img { max-width: 100%; height: auto; }
 .line-pill.active { background: var(--lc); border-color: var(--lc); color: #fff; }
 .line-pill.active i { background: #fff; }
 
-.metro-main {
-  display: grid;
-  grid-template-columns: minmax(0, 1.38fr) minmax(300px, 0.62fr);
-  border-bottom: 1px solid var(--line);
+.metro-svg-scroll {
+  overflow-x: auto;
+  padding: 14px 16px 16px;
+  background: var(--white);
 }
+.metro-exact-svg {
+  width: 100%;
+  min-width: 980px;
+  height: auto;
+  display: block;
+  font-family: var(--sans);
+  transition: width 0.2s ease;
+}
+.metro-svg-scroll.zoomed .metro-exact-svg {
+  width: 145%;
+  min-width: 1420px;
+}
+.metro-exact-svg .metro-track-grp,
+.metro-exact-svg .metro-tchip,
+.metro-exact-svg .metro-bar-blk {
+  transition: opacity 0.2s ease;
+}
+.metro-exact-svg .dimmed { opacity: 0.14; }
+.metro-exact-svg a:hover .m-pill-bg {
+  stroke-opacity: 1 !important;
+  stroke-width: 2.2 !important;
+  filter: drop-shadow(0 2px 4px rgba(23, 35, 32, 0.14));
+}
+.metro-exact-svg .metro-pw-legend:hover text { fill: var(--teal); font-weight: 700; }
+.metro-exact-svg .metro-pw-legend.active text { fill: var(--plum); font-weight: 700; }
 .metro-tracks-col {
   padding: 18px 18px 16px;
   border-right: 1px solid var(--line);
