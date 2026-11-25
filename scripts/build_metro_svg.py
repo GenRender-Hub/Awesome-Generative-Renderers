@@ -156,7 +156,7 @@ def build_svg() -> str:
     out.append(f'<path d="M {sx(90.9)} {sy(116.2)} L {sx(90.9)} {sy(71.3)} Q {sx(90.9)} {sy(70.3)} {sx(91.9)} {sy(70.3)} L {sx(93.1)} {sy(70.3)}" fill="none" stroke="{PAL["grteal"]}" stroke-width="2.8" stroke-dasharray="7 4" marker-end="url(#ma-teal)"/>')
     out.append(f'<line x1="{sx(llm_start)}" y1="{sy(116.2)}" x2="{sx(93.0)}" y2="{sy(116.2)}" stroke="{PAL["grteal"]}" stroke-width="6.2" stroke-linecap="round" marker-end="url(#ma-teal)"/>')
     # Badge
-    out.append(f'<rect x="{sx(llm_start-18.8)}" y="{sy(118.4)}" width="{sx(18.6)}" height="{4.4*S}" rx="8" fill="{PAL["grteal"]}"/><text x="{sx(llm_start-9.5)}" y="{sy(115.6)}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">LLM Scene Authoring</text>')
+    out.append(f'<rect x="{sx(llm_start-18.8)}" y="{sy(118.4)}" width="{sx(18.6)}" height="{4.4*S}" rx="8" fill="{PAL["grteal"]}"/><text x="{sx(llm_start-9.5)}" y="{sy(115.6)}" text-anchor="middle" font-size="12.6" font-weight="700" fill="#fff">LLM Scene Authoring</text>')
     out.append('</g>')
 
     # 2. Subject & Multi-Ref R2V (grgold, y=97.8)
@@ -166,7 +166,7 @@ def build_svg() -> str:
     out.append(f'<path d="M {sx(88.8)} {sy(97.8)} L {sx(89.3)} {sy(97.8)} Q {sx(90.0)} {sy(97.8)} {sx(90.0)} {sy(98.6)} L {sx(90.0)} {sy(109.9)} Q {sx(90.0)} {sy(110.7)} {sx(90.8)} {sy(110.7)} L {sx(93.1)} {sy(110.7)}" fill="none" stroke="{PAL["grgold"]}" stroke-width="4.0" marker-end="url(#ma-gold)"/>')
     out.append(f'<path d="M {sx(90.0)} {sy(97.8)} L {sx(90.0)} {sy(79.5)} Q {sx(90.0)} {sy(78.5)} {sx(91.0)} {sy(78.5)} L {sx(93.1)} {sy(78.5)}" fill="none" stroke="{PAL["grgold"]}" stroke-width="2.8" stroke-dasharray="7 4" marker-end="url(#ma-gold)"/>')
     out.append(f'<line x1="{sx(32.0)}" y1="{sy(100.6)}" x2="{sx(r2v_start)}" y2="{sy(97.8)}" stroke="{PAL["grgold"]}" stroke-width="1.4"/>')
-    out.append(f'<rect x="{sx(12.2)}" y="{sy(103.4)}" width="{sx(20.0)}" height="{4.4*S}" rx="8" fill="{PAL["grgold"]}"/><text x="{sx(22.2)}" y="{sy(100.6)}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Subject &amp; Multi-Ref R2V</text>')
+    out.append(f'<rect x="{sx(12.2)}" y="{sy(103.4)}" width="{sx(20.0)}" height="{4.4*S}" rx="8" fill="{PAL["grgold"]}"/><text x="{sx(22.2)}" y="{sy(100.6)}" text-anchor="middle" font-size="12.6" font-weight="700" fill="#fff">Subject &amp; Multi-Ref R2V</text>')
     out.append('</g>')
 
     # 3. Graphics & Buffer Synthesis (mgeo -> grplum, y=74.4 + Streamed branch y=59.7)
@@ -181,7 +181,7 @@ def build_svg() -> str:
     out.append(f'<path d="M {sx(66.8)} {sy(73.3)} L {sx(stream_bend)} {sy(59.7)} L {sx(91.4)} {sy(59.7)}" fill="none" stroke="#fff" stroke-width="1.8" stroke-dasharray="5 4"/>')
     out.append(f'<line x1="{sx(4.8)}" y1="{sy(84.8)}" x2="{sx(geo_start)}" y2="{sy(74.4)}" stroke="{PAL["mgeo"]}" stroke-width="1.4"/>')
     out.append(f'<circle cx="{sx(geo_start)}" cy="{sy(74.4)}" r="5.5" fill="#fff" stroke="{PAL["mgeo"]}" stroke-width="2.2"/>')
-    out.append(f'<rect x="{sx(1.8)}" y="{sy(88.3)}" width="{sx(24.0)}" height="{4.4*S}" rx="8" fill="{PAL["grplum"]}"/><text x="{sx(13.8)}" y="{sy(85.5)}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Graphics &amp; Buffer Synthesis</text>')
+    out.append(f'<rect x="{sx(1.8)}" y="{sy(88.3)}" width="{sx(24.0)}" height="{4.4*S}" rx="8" fill="{PAL["grplum"]}"/><text x="{sx(13.8)}" y="{sy(85.5)}" text-anchor="middle" font-size="12.6" font-weight="700" fill="#fff">Graphics &amp; Buffer Synthesis</text>')
     out.append('</g>')
 
     # 4. Action WMs (grblue, y=44.3)
@@ -189,7 +189,7 @@ def build_svg() -> str:
     out.append('<g class="metro-track-grp" data-mline="wm">')
     out.append(f'<path d="M {sx(87.4)} {sy(44.3)} L {sx(89.8)} {sy(44.3)} Q {sx(90.6)} {sy(44.3)} {sx(90.6)} {sy(45.1)} L {sx(90.6)} {sy(52.2)} Q {sx(90.6)} {sy(53.0)} {sx(91.4)} {sy(53.0)} L {sx(93.1)} {sy(53.0)}" fill="none" stroke="{PAL["grblue"]}" stroke-width="4.0" marker-end="url(#ma-blue)"/>')
     out.append(f'<line x1="{sx(wm_start)}" y1="{sy(44.3)}" x2="{sx(93.0)}" y2="{sy(44.3)}" stroke="{PAL["grblue"]}" stroke-width="6.2" stroke-linecap="round" marker-end="url(#ma-blue)"/>')
-    out.append(f'<rect x="{sx(wm_start-11.6)}" y="{sy(46.5)}" width="{sx(11.4)}" height="{4.4*S}" rx="8" fill="{PAL["grblue"]}"/><text x="{sx(wm_start-5.9)}" y="{sy(43.7)}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Action WMs</text>')
+    out.append(f'<rect x="{sx(wm_start-11.6)}" y="{sy(46.5)}" width="{sx(11.4)}" height="{4.4*S}" rx="8" fill="{PAL["grblue"]}"/><text x="{sx(wm_start-5.9)}" y="{sy(43.7)}" text-anchor="middle" font-size="12.6" font-weight="700" fill="#fff">Action WMs</text>')
     out.append('</g>')
 
     # ---- Parse & render ALL 57 exact stations (\msa / \msb) ----
@@ -211,9 +211,9 @@ def build_svg() -> str:
 
         ly_end = ty + stem if side == "a" else ty - stem
         lx = tx + xoff
-        # Estimate clean pill width (mm)
-        pw = max(10.5, len(lbl) * 0.80 + 4.4)
-        ph = 3.55
+        # Exact metro.tex station pill proportions (4.0pt font -> 10.4px SVG units, ph=2.70mm)
+        pw = max(8.4, len(lbl) * 0.61 + 3.5)
+        ph = 2.70
         pill_y_top = ly_end + ph if side == "a" else ly_end
 
         out.append(f'<g class="metro-track-grp metro-station" data-mline="{mline}">')
@@ -230,10 +230,10 @@ def build_svg() -> str:
         close_a = "</a>" if url else "</g>"
         out.append(open_a)
         out.append(f'<title>{escape(full_title)} ({yr}-{int(mo):02d})</title>')
-        out.append(f'<rect class="m-pill-bg" x="{sx(lx - pw/2)}" y="{sy(pill_y_top)}" width="{sx(pw)}" height="{ph*S}" rx="6" fill="#FFFFFF" stroke="{col}" stroke-opacity="0.55" stroke-width="1.1"/>')
-        out.append(f'<image href="assets/org_icons/{escape(logo)}.png" x="{sx(lx - pw/2 + 0.7)}" y="{sy(pill_y_top - 0.75)}" width="20" height="20" preserveAspectRatio="xMidYMid meet"/>')
+        out.append(f'<rect class="m-pill-bg" x="{sx(lx - pw/2)}" y="{sy(pill_y_top)}" width="{sx(pw)}" height="{ph*S}" rx="5" fill="#FFFFFF" stroke="{col}" stroke-opacity="0.55" stroke-width="1.05"/>')
+        out.append(f'<image href="assets/org_icons/{escape(logo)}.png" x="{sx(lx - pw/2 + 0.55)}" y="{sy(pill_y_top - 0.52)}" width="16.5" height="16.5" preserveAspectRatio="xMidYMid meet"/>')
         fw = "700" if bold else "500"
-        out.append(f'<text x="{sx(lx - pw/2 + 3.1)}" y="{sy(pill_y_top - 2.35)}" font-size="12.8" font-weight="{fw}" fill="{PAL["grslate"]}">{escape(lbl)}</text>')
+        out.append(f'<text x="{sx(lx - pw/2 + 2.55)}" y="{sy(pill_y_top - 1.78)}" font-size="10.4" font-weight="{fw}" fill="{PAL["grslate"]}">{escape(lbl)}</text>')
         out.append(close_a)
         out.append("</g>")
 
@@ -252,15 +252,15 @@ def build_svg() -> str:
     for ck, fx, fy, anchor, llen, lines in forks:
         col = PAL[ck]
         fe = fx + llen if anchor == "west" else fx - llen
-        bw = max(len(l) for l in lines) * 0.78 + 2.2
-        bh = 2.9 * len(lines) + 1.4
+        bw = max(len(l) for l in lines) * 0.50 + 2.0
+        bh = 1.95 * len(lines) + 1.2
         bx = fe if anchor == "west" else fe - bw
         out.append(f'<line x1="{sx(fx)}" y1="{sy(fy)}" x2="{sx(fe)}" y2="{sy(fy)}" stroke="{col}" stroke-width="1.3"/>')
-        out.append(f'<circle cx="{sx(fx)}" cy="{sy(fy)}" r="3.2" fill="{col}"/>')
-        out.append(f'<rect x="{sx(bx)}" y="{sy(fy + bh/2)}" width="{sx(bw)}" height="{bh*S}" rx="6" fill="#FFFFFF" stroke="{col}" stroke-opacity="0.55" stroke-width="1.1"/>')
+        out.append(f'<circle cx="{sx(fx)}" cy="{sy(fy)}" r="3.0" fill="{col}"/>')
+        out.append(f'<rect x="{sx(bx)}" y="{sy(fy + bh/2)}" width="{sx(bw)}" height="{bh*S}" rx="5" fill="#FFFFFF" stroke="{col}" stroke-opacity="0.58" stroke-width="1.05"/>')
         for idx, ltxt in enumerate(lines):
-            ty_line = fy + bh/2 - 2.3 - idx * 2.85
-            out.append(f'<text x="{sx(bx + bw/2)}" y="{sy(ty_line)}" text-anchor="middle" font-size="12.2" font-style="italic" fill="#46534F">{escape(ltxt)}</text>')
+            ty_line = fy + bh/2 - 1.85 - idx * 1.95
+            out.append(f'<text x="{sx(bx + bw/2)}" y="{sy(ty_line)}" text-anchor="middle" font-size="9.9" font-style="italic" fill="#46534F">{escape(ltxt)}</text>')
 
     # ---- Right-hand Terminal boxes (x=93.4..159.2) ----
     # T3a box (y=94.4..125.0)
@@ -302,9 +302,9 @@ def build_svg() -> str:
         out.append(open_a)
         out.append(f'<title>{escape(full_title)}</title>')
         out.append(f'<rect class="m-pill-bg" x="{sx(cx - cw/2)}" y="{sy(cy + ch/2)}" width="{sx(cw)}" height="{ch*S}" rx="6" fill="{fill}" stroke="{stroke}" stroke-opacity="0.78" stroke-width="1.2"/>')
-        out.append(f'<image href="assets/org_icons/{escape(logo)}.png" x="{sx(cx - cw/2 + 0.7)}" y="{sy(cy + 1.05)}" width="21" height="21" preserveAspectRatio="xMidYMid meet"/>')
+        out.append(f'<image href="assets/org_icons/{escape(logo)}.png" x="{sx(cx - cw/2 + 0.7)}" y="{sy(cy + 0.92)}" width="18.5" height="18.5" preserveAspectRatio="xMidYMid meet"/>')
         fw = "700" if bold else "500"
-        out.append(f'<text x="{sx(cx - cw/2 + 3.2)}" y="{sy(cy - 0.55)}" font-size="13.0" font-weight="{fw}" fill="{PAL["grslate"]}">{escape(lbl)}</text>')
+        out.append(f'<text x="{sx(cx - cw/2 + 2.9)}" y="{sy(cy - 0.45)}" font-size="11.6" font-weight="{fw}" fill="{PAL["grslate"]}">{escape(lbl)}</text>')
         out.append(close_a)
 
     # ---- Time axis (y=29.5) ----
