@@ -246,8 +246,40 @@ def sync_assets() -> None:
     assets_dir.mkdir(parents=True, exist_ok=True)
     lockups_dir.mkdir(parents=True, exist_ok=True)
 
-    # 1. Cropped transparent logo
-    shutil.copy2(SURVEY_DIR / "brand/logoVideoRender_cropped.png", assets_dir / "logo.png")
+    # 1. Render transparent VideoRender logo from latest brand PDF (plus square icon favicon)
+    logo_pdf = SURVEY_DIR / "brand/VideoRender_logo.pdf"
+    if logo_pdf.exists():
+        tmp_logo = Path("/tmp/hub_logo_render")
+        subprocess.run(
+            ["pdftocairo", "-png", "-transp", "-r", "300", "-singlefile", str(logo_pdf), str(tmp_logo)],
+            check=True,
+        )
+        logo_im = Image.open(f"{tmp_logo}.png").convert("RGBA")
+        alpha = logo_im.getchannel("A")
+        bbox = alpha.getbbox()
+        if bbox:
+            pad = 4
+            logo_im = logo_im.crop((
+                max(0, bbox[0] - pad),
+                max(0, bbox[1] - pad),
+                min(logo_im.width, bbox[2] + pad),
+                min(logo_im.height, bbox[3] + pad),
+            ))
+        logo_im.thumbnail((1200, 300), Image.Resampling.LANCZOS)
+        logo_im.save(assets_dir / "logo.png", optimize=True)
+        # Square favicon from left filmstrip icon region
+        icon_w = int(logo_im.width * 0.42)
+        icon_crop = logo_im.crop((0, 0, icon_w, logo_im.height))
+        ib = icon_crop.getchannel("A").getbbox()
+        if ib:
+            icon_crop = icon_crop.crop(ib)
+        side = max(icon_crop.width, icon_crop.height) + 12
+        sq = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+        sq.paste(icon_crop, ((side - icon_crop.width) // 2, (side - icon_crop.height) // 2), icon_crop)
+        sq.thumbnail((128, 128), Image.Resampling.LANCZOS)
+        sq.save(assets_dir / "favicon.png", optimize=True)
+    else:
+        shutil.copy2(SURVEY_DIR / "brand/logoVideoRender_cropped.png", assets_dir / "logo.png")
 
     # 2. Transparent teaser resized for crisp fast web loading (1800px wide)
     t_im = Image.open(SURVEY_DIR / "figures/generated/genrender_teaser_v19_transparent.png").convert("RGBA")
