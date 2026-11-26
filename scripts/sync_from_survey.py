@@ -348,7 +348,7 @@ def render_readme(systems: list[dict], benches: list[dict], cited_count: int) ->
         "```bibtex",
         "@article{li2026generativerenderers,",
         "  title   = {Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond},",
-        "  author  = {Li, Xinye and Zhang, Liuzhou and Sun, Te and Luo, Shipeng and Lin, Lingshuai and Jin, Yijie and Lang, Zirui and Fang, Guian and others and Wu, Shu and Huang, Yan and Ding, Fangqiang and Zhang, Shaofeng and Lam, Wai},",
+        "  author  = {Li, Xinye and Zhang, Liuzhou and Sun, Te and Luo, Shipeng and Lin, Lingshuai and Jin, Yijie and Lang, Zirui and Fang, Guian and others and Wu, Shu and Huang, Yan and Zhang, Shaofeng and Ding, Fangqiang and Lam, Wai},",
         "  journal = {arXiv preprint},",
         "  year    = {2026}",
         "}",
@@ -408,7 +408,7 @@ def main() -> None:
     (HUB_DIR / "citation.bib").write_text(
         "@article{li2026generativerenderers,\n"
         "  title   = {Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond},\n"
-        "  author  = {Li, Xinye and Zhang, Liuzhou and Sun, Te and Luo, Shipeng and Lin, Lingshuai and Jin, Yijie and Lang, Zirui and Fang, Guian and others and Wu, Shu and Huang, Yan and Ding, Fangqiang and Zhang, Shaofeng and Lam, Wai},\n"
+        "  author  = {Li, Xinye and Zhang, Liuzhou and Sun, Te and Luo, Shipeng and Lin, Lingshuai and Jin, Yijie and Lang, Zirui and Fang, Guian and others and Wu, Shu and Huang, Yan and Zhang, Shaofeng and Ding, Fangqiang and Lam, Wai},\n"
         "  journal = {arXiv preprint},\n"
         "  year    = {2026}\n"
         "}\n",
