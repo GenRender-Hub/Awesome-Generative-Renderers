@@ -1,7 +1,7 @@
 # Awesome Generative Renderers
 ### *Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond*
 
-[![Survey Hub](https://img.shields.io/badge/Survey_Hub-genrender--hub.github.io-1E5246?style=for-the-badge)](https://genrender-hub.github.io/) [![Cited Works](https://img.shields.io/badge/Cited_Works-336-4E6E91?style=for-the-badge)](https://genrender-hub.github.io/#library) [![Tier-3 Renderers](https://img.shields.io/badge/Tier--3_Renderers-50-785C84?style=for-the-badge)](#tier-3b-streamed--stateful-renderers) [![Benchmarks](https://img.shields.io/badge/Benchmarks-29-AD803B?style=for-the-badge)](#evaluation-benchmarks) [![Contact](https://img.shields.io/badge/Contact-xyli%40se.cuhk.edu.hk-A75246?style=for-the-badge)](mailto:xyli@se.cuhk.edu.hk)
+[![Survey Hub](https://img.shields.io/badge/Survey_Hub-genrender--hub.github.io-1E5246?style=for-the-badge)](https://genrender-hub.github.io/) [![Cited Works](https://img.shields.io/badge/Cited_Works-337-4E6E91?style=for-the-badge)](https://genrender-hub.github.io/#library) [![Tier-3 Renderers](https://img.shields.io/badge/Tier--3_Renderers-50-785C84?style=for-the-badge)](#tier-3b-streamed--stateful-renderers) [![Benchmarks](https://img.shields.io/badge/Benchmarks-30-AD803B?style=for-the-badge)](#evaluation-benchmarks) [![Contact](https://img.shields.io/badge/Contact-xyli%40se.cuhk.edu.hk-A75246?style=for-the-badge)](mailto:xyli@se.cuhk.edu.hk)
 
 A living, community-maintained research library and interactive companion accompanying the survey ***Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond*** (November 2026). Synthesizing **over 330 works** (`336` verified references) and comparing **68 representative systems** across tiers 1–3 (`26` pre-fixed T3a renderers, `24` causal/stateful T3b renderers, and `18` reference-conditioned T1–T2 systems).
 
@@ -106,7 +106,7 @@ Frontier video generation is shifting from open-ended content invention toward *
 | [Kling-Omni](https://arxiv.org/abs/2512.16776) | 2025 | Multimodal context (T2) | Text, images, video references | Shifted-window asym. attn. | No |
 | [Custom Forcing](https://arxiv.org/abs/2610.02914) | 2026 | Streaming subject identity (T1) | 5 subject anchor images, prompt | Persistent KV + DVA/ACG | Yes |
 
-## Evaluation Benchmarks (29 benchmarks across 3 pipeline stages)
+## Evaluation Benchmarks (30 benchmarks across 3 pipeline stages)
 
 | Benchmark | Stage | Reference / Oracle | Breakdown | Cases |
 |---|---|---|---|---|
@@ -120,6 +120,7 @@ Frontier video generation is shifting from open-ended content invention toward *
 | [VibePrevisBench](https://arxiv.org/abs/2611.15789) | Stage 1: Specification Construction | Hidden scene facts | 4 briefs | 242 |
 | [PROWBench](https://arxiv.org/abs/2610.02205) | Stage 2: Rendering | Engine log | 5 subsets | 170 |
 | [WorldDraft](https://arxiv.org/abs/2611.16217) | Stage 2: Rendering | Sim. state; prompt | 48 worlds | 432 |
+| [ProxyGenBench](https://arxiv.org/abs/2611.34457) | Stage 2: Rendering | Checklists; inputs | 3 tasks | 312 |
 | [RenderBench](https://arxiv.org/abs/2610.08684) | Stage 2: Rendering | Real target video | 2 tracks | 12 |
 | [ProxyBench](https://arxiv.org/abs/2609.35023) | Stage 2: Rendering | Input path; proxy | – | 300 |
 | [OmniVBench](https://arxiv.org/abs/2609.22069) | Stage 2: Rendering | Ref. checklists | 7 families | 813 |
